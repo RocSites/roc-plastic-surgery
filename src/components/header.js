@@ -96,7 +96,7 @@ const Header = ({ siteTitle }) => {
     >
       <div className={classes.navBarTitle}>
           <Link to="/" style={{color: '#001841',textDecoration: `none`}}>
-            <img className={classes.navLogo} src={logoBlack} alt="ph pool logo black"/>
+            Chill & Grill
           </Link>
       </div>
       <div className={classes.navBarHamburgerDrawerWrapper}>
@@ -122,7 +122,7 @@ const Header = ({ siteTitle }) => {
                       button
                       onClick={() => handleClick('#services')}
                   >
-                <ListItemText primary={"Services"} />
+                <ListItemText primary={"Menu"} />
                 </ListItem>
                 <ListItem 
                     className={classes.drawerItem} 
@@ -139,13 +139,6 @@ const Header = ({ siteTitle }) => {
                 >
                 <ListItemText primary={"Contact Us"} />
                 </ListItem>
-                <ListItem 
-                    className={classes.drawerItem} 
-                    button
-                    onClick={() => handleClick('#contactForm')}
-                >
-                <ListItemText primary={"Reviews"} />
-                </ListItem>
             </List>
           </div>
         </Drawer>
@@ -155,7 +148,7 @@ const Header = ({ siteTitle }) => {
             onClick={() => scrollTo('#services')}
           
           >
-            Services
+            Grill Menu
           </Button>
           < Button 
               className={classes.navButton}
@@ -170,13 +163,6 @@ const Header = ({ siteTitle }) => {
             
             >
               Contact Us
-            </Button>
-            <Button 
-              className={classes.navButton}
-              onClick={() => scrollTo('#contactForm')}
-            
-            >
-              Reviews
             </Button>
           </div>
       </div>

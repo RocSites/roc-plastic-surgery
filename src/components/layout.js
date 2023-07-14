@@ -85,8 +85,8 @@ const Layout = ({ children }) => {
         <footer className={classes.footerRoot}>
           <div className={classes.footerContent}>
             {/* <a href="tel:(585) 624-9870" className={classes.footerPhone}>(585) 624-9870</a> */}
-            <p className={classes.copyrightText}> © {new Date().getFullYear()}, PH Pool & Spa Service</p>
-            <p className={classes.dougDesignText}>Website created and maintained by <span><a href="https://www.dougkellermeyer.com/" target="_blank">Doug Kellermeyer</a></span></p>
+            <p className={classes.copyrightText}> © {new Date().getFullYear()}, Chill & Grill</p>
+            <p className={classes.dougDesignText}>Website created and maintained by <span><a href="https://www.rocsites.com/" target="_blank">Rocsites</a></span></p>
           </div>
         </footer>
       </div>

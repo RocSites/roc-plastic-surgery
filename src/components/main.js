@@ -488,10 +488,10 @@ const Main = () => {
                 <div class="container">
                     <div className={classes.landingWrapper}>
                         <div className={classes.landingMessageWrapper}>
-                            <Typography className={classes.landingPageHeader}>PH Pool & Spa Service</Typography>
-                            <Typography className={classes.landingPageSubHeader}>Rochester's Top Choice</Typography>
-                            <Typography className={classes.landingPageSubHeaderMobile}>Rochester's</Typography>
-                            <Typography className={classes.landingPageSubHeaderMobile}>Top Choice</Typography>
+                            <Typography className={classes.landingPageHeader}>Chill & Grill</Typography>
+                            <Typography className={classes.landingPageSubHeader}>Ice Cream Shop & Grill</Typography>
+                            <Typography className={classes.landingPageSubHeaderMobile}>Ice Cream Shop</Typography>
+                            <Typography className={classes.landingPageSubHeaderMobile}>& Grill</Typography>
                         </div>
                     </div>
                 </div>
