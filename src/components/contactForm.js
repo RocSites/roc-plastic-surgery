@@ -41,7 +41,7 @@ const withStyles = makeStyles((theme) => ({
         justifyContent: "space-between",
         flexDirection: "column",
         margin: "10px",
-        fontFamily: "Raleway, sans-serif"
+        // fontFamily: "Raleway, sans-serif"
       },
       formTextarea: {
         display: "flex",
@@ -49,7 +49,7 @@ const withStyles = makeStyles((theme) => ({
         flexDirection: "column",
         margin: "10px",
         marginBottom: "20px",
-        fontFamily: "Raleway, sans-serif"
+        // fontFamily: "Raleway, sans-serif"
       },
       submitButton: {
         margin:"20px",
@@ -80,7 +80,7 @@ const withStyles = makeStyles((theme) => ({
       footerPhone: {
           color: "black",
           textDecoration: "none",
-          fontFamily: "Raleway, sans-serif"
+          // fontFamily: "Raleway, sans-serif"
       }
 
 }));

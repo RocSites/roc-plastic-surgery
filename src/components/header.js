@@ -14,7 +14,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 const withStyles = makeStyles( () => ({
   "@global":{
     "*":{
-        fontFamily: "Raleway, sans-serif !important"
+        // fontFamily: "Raleway, sans-serif !important"
     }
   },
   navBarRoot: {
