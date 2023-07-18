@@ -21,7 +21,6 @@ import poolEquipmentSales from '../images/poolEquipmentSales.jpg'
 import phBizCard from '../images/phBizCard.jpeg'
 import poolSafety from '../images/pool_safety2.jpg'
 import chillGrillSign from '../images/chill_grill_background.jpg'
-
 import fiveStar from '../images/fiveStar.png'
 import Divider from '@material-ui/core/Divider'
 import PhoneIcon from '@material-ui/icons/Phone'
@@ -31,11 +30,6 @@ import StarRateIcon from '@material-ui/icons/StarRate';
 import "./main.css"
 
 const withStyles = makeStyles(() => ({
-    "@global": {
-        "*": {
-            // fontFamily: "Raleway, sans-serif !important"
-        }
-    },
     mainRoot: {
         display: "flex",
         flexDirection: "column"
@@ -122,12 +116,12 @@ const withStyles = makeStyles(() => ({
         background: "white"
     },
     someOfWorkHeader: {
-        // fontFamily: "Raleway, sans-serif",
         textAlign: "center",
         fontSize: "2rem",
-        fontWeight: "bold",
         color: "black",
         padding: "10px",
+        width: "50%",
+        margin: "auto"
     },
     landingMessageWrapper: {
         display: "flex",
@@ -147,8 +141,7 @@ const withStyles = makeStyles(() => ({
         marginLeft: "0px",
         marginRight: "0px",
         fontSize: "3.0em",
-        fontWeight: "100",
-        // fontFamily: "Raleway, sans-serif",
+        fontWeight: "500",
         textAlign: "center",
         margin: "auto"
     },
@@ -158,8 +151,8 @@ const withStyles = makeStyles(() => ({
         marginLeft: "0px",
         marginRight: "0px",
         fontSize: "2em",
-        fontWeight: "100",
-        // fontFamily: "Raleway, sans-serif",
+        fontWeight: "500",
+        fontFamily: "Angkor, sans-serif !important",
         textAlign: "center",
         margin: "auto",
         "@media(max-width: 600px)": {
@@ -270,7 +263,6 @@ const withStyles = makeStyles(() => ({
     },
     contactHeader: {
         fontSize: "2.0rem",
-        fontWeight: "bold",
         textAlign: "center",
         color: "#333333"
     },
@@ -471,10 +463,10 @@ const Main = () => {
                     >
                         <div className={classes.landingWrapper}>
                             <div className={classes.landingMessageWrapper}>
-                                <Typography className={classes.landingPageHeader}>Chill & Grill</Typography>
+                                {/* <Typography className={classes.landingPageHeader}>Chill & Grill</Typography>
                                 <Typography className={classes.landingPageSubHeader}>Old Fashioned Ice Cream & Great Food</Typography>
                                 <Typography className={classes.landingPageSubHeaderMobile}>Old Fashioned Ice Cream</Typography>
-                                <Typography className={classes.landingPageSubHeaderMobile}>& Great Food</Typography>
+                                <Typography className={classes.landingPageSubHeaderMobile}>& Great Food</Typography> */}
                             </div>
                         </div>
                     </BackgroundImage>
@@ -484,14 +476,22 @@ const Main = () => {
 
             <span className={classes.scrollToServices} id="services"></span>
             <section class="py-5 section-bubble2">
+           
                 <div class="container">
-                    <Typography className={classes.someOfWorkHeader}>Either About Section or Other content</Typography>
+                    <Typography className={classes.someOfWorkHeader}>Family owned and operated, Chill & Grill serves old fashioned ice cream & great food.</Typography>
                     <Divider className={classes.serviceDivider} />
                     <Typography className={classes.serviceSummary}>Content subheader</Typography>
-                    <div className={classes.servicesBulletsWrapper}>
+                    <div style={{border: "1px solid blue"}} className={classes.servicesBulletsWrapper}>
                         <button>Ice Cream/Chill Menu</button>
                         <button>Grill Menu</button>
                     </div>
+                </div>
+
+                <div style={{border: "1px solid red"}} class="container">
+                    <Typography>HOURS</Typography>
+                </div>
+                <div style={{border: "1px solid green"}} class="container">
+                    <Typography>Sprinkles</Typography>
                 </div>
 
                 <div class="container">

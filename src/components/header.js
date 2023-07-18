@@ -14,7 +14,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 const withStyles = makeStyles(() => ({
   "@global": {
     "*": {
-      // fontFamily: "Raleway, sans-serif !important"
+      fontFamily: "Angkor !important",
+      fontWeight: "100"
     }
   },
   navBarRoot: {
@@ -35,6 +36,7 @@ const withStyles = makeStyles(() => ({
   },
   navButton: {
     color: "#ffffff",
+    fontWeight: "bold",
     textTransform: "none"
   },
   navBarButtonWrapper: {
@@ -55,7 +57,8 @@ const withStyles = makeStyles(() => ({
   navLogo: {
     display: "flex",
     width: "60px",
-    margin: "auto"
+    margin: "auto",
+    borderRadius: "30px"
   },
   drawerItem: {
     "&:hover": {
@@ -115,7 +118,7 @@ const Header = ({ siteTitle }) => {
             onClick={() => scrollTo('#services')}
 
           >
-            Grill Menu
+            Menus
           </Button>
           < Button
             className={classes.navButton}
