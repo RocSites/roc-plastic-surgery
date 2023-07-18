@@ -20,9 +20,8 @@ import poolPump from '../images/pool_pump.jpg'
 import poolEquipmentSales from '../images/poolEquipmentSales.jpg'
 import phBizCard from '../images/phBizCard.jpeg'
 import poolSafety from '../images/pool_safety2.jpg'
-import riverPhoto from '../images/deckCreek.jpg'
-import imageBlurOverlay from '../images/overlay1.png'
-import poolWaterfall from '../images/swimming-pool-banner_cropped.jpg'
+import chillGrillSign from '../images/chill_grill_background.jpg'
+
 import fiveStar from '../images/fiveStar.png'
 import Divider from '@material-ui/core/Divider'
 import PhoneIcon from '@material-ui/icons/Phone'
@@ -44,7 +43,7 @@ const withStyles = makeStyles(() => ({
     landingWrapper: {
         display: "flex",
         // minHeight: "100vh",
-        minHeight: "65vh",
+        minHeight: "100vh",
         flexDirection: "column",
         margin: "auto"
 
@@ -134,7 +133,6 @@ const withStyles = makeStyles(() => ({
         display: "flex",
         flexDirection: "column",
         margin: "auto",
-        marginTop: "15%",
         opacity: "0.85",
         marginLeft: "0px",
         marginRight: "0px",
@@ -209,15 +207,15 @@ const withStyles = makeStyles(() => ({
     },
     scrollToAbout: {
         height: "80px",
-        background: "#3587de"
+        background: "#ffffff"
     },
     scrollToServices: {
         paddingBottom: "80px",
-        backgroundColor: "#1563b2"
+        backgroundColor: "#ffffff"
     },
     scrollToContact: {
         paddingBottom: "80px",
-        backgroundColor: "#76ace7"
+        backgroundColor: "#ffffff"
     },
     servicesListWrapper: {
         display: "flex",
@@ -320,7 +318,7 @@ const withStyles = makeStyles(() => ({
         alignItems: "center",
     },
     reviewButton: {
-        backgroundColor: "#b8d1ed",
+        backgroundColor: "#0074eb",
         borderRadius: "25px",
         padding: "20px",
         marginBottom: "20px"
@@ -426,16 +424,16 @@ const withStyles = makeStyles(() => ({
 
 const Main = () => {
     const classes = withStyles();
-    const { mobileImage, desktopImage} = useStaticQuery(graphql`
+    const { mobileImage, desktopImage } = useStaticQuery(graphql`
     query { 
-      desktopImage: file(relativePath: { eq: "chill_grill_background.jpeg" }) {
+      desktopImage: file(relativePath: { eq: "ice_cream_1.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      mobileImage: file(relativePath: { eq: "chill_grill_background.jpeg" }) {
+      mobileImage: file(relativePath: { eq: "ice_cream_1.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 650) {
             ...GatsbyImageSharpFluid
@@ -449,8 +447,8 @@ const Main = () => {
     const sources = [
         mobileImage.childImageSharp.fluid,
         {
-          ...desktopImage.childImageSharp.fluid,
-          media: `(min-width: 650px)`
+            ...desktopImage.childImageSharp.fluid,
+            media: `(min-width: 650px)`
         }
     ]
 
@@ -474,9 +472,9 @@ const Main = () => {
                         <div className={classes.landingWrapper}>
                             <div className={classes.landingMessageWrapper}>
                                 <Typography className={classes.landingPageHeader}>Chill & Grill</Typography>
-                                <Typography className={classes.landingPageSubHeader}>Ice Cream Shop & Grill</Typography>
-                                <Typography className={classes.landingPageSubHeaderMobile}>Ice Cream Shop</Typography>
-                                <Typography className={classes.landingPageSubHeaderMobile}>& Grill</Typography>
+                                <Typography className={classes.landingPageSubHeader}>Old Fashioned Ice Cream & Great Food</Typography>
+                                <Typography className={classes.landingPageSubHeaderMobile}>Old Fashioned Ice Cream</Typography>
+                                <Typography className={classes.landingPageSubHeaderMobile}>& Great Food</Typography>
                             </div>
                         </div>
                     </BackgroundImage>
@@ -487,43 +485,35 @@ const Main = () => {
             <span className={classes.scrollToServices} id="services"></span>
             <section class="py-5 section-bubble2">
                 <div class="container">
-                    <Typography className={classes.someOfWorkHeader}>Custom Renovations, Sales and Service</Typography>
+                    <Typography className={classes.someOfWorkHeader}>Either About Section or Other content</Typography>
                     <Divider className={classes.serviceDivider} />
-                    <Typography className={classes.serviceSummary}>From basic maintenance to complete pool renovations, we have you covered.</Typography>
+                    <Typography className={classes.serviceSummary}>Content subheader</Typography>
                     <div className={classes.servicesBulletsWrapper}>
-                        <ul>
-                            <li>Inground Pool Liner Replacements</li>
-                            <li>Safety Cover Installations</li>
-                            <li>Open and Close Inground Pools</li>
-                            <li>Pool and Spa Equipment Sales and Service</li>
-                        </ul>
-                        <ul>
-                            <li>Leak Detection and Underground Plumbing</li>
-                            <li>Paint Gunite Pools</li>
-                            <li>Major Swimming Pool Renovations</li>
-                        </ul>
+                        <button>Ice Cream/Chill Menu</button>
+                        <button>Grill Menu</button>
                     </div>
                 </div>
 
                 <div class="container">
                     <div className={classes.serviceWrapper}>
+                        <div>Add new pictures here, alternate with words like mitchells dougDesignText</div>
                         <div className={classes.servicesListWrapper}>
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
                                     <img className={classes.servicesCardImage} src={liner4} alt="pool with cover" />
-                                    <Typography className={classes.servicesCardText}>Pool Openings & Closings</Typography>
+                                    <Typography className={classes.servicesCardText}>Title of image</Typography>
                                 </CardContent>
                             </Card>
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
                                     <img className={classes.servicesCardImage} src={liner2} alt="child swimming" />
-                                    <Typography className={classes.servicesCardText}>Pool Inspections</Typography>
+                                    <Typography className={classes.servicesCardText}>Title of image</Typography>
                                 </CardContent>
                             </Card>
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
                                     <img className={classes.servicesCardImage} src={liner6} alt="pool liner" />
-                                    <Typography className={classes.servicesCardText}>Custom Pool Liners by PH</Typography>
+                                    <Typography className={classes.servicesCardText}>Title of image</Typography>
                                 </CardContent>
                             </Card>
                             <Card className={classes.servicesCard}>
@@ -535,7 +525,7 @@ const Main = () => {
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
                                     <img className={classes.servicesCardImage} src={liner5} alt="pool liner install" />
-                                    <Typography className={classes.servicesCardText}>Major Pool Renovations</Typography>
+                                    <Typography className={classes.servicesCardText}>Title of image</Typography>
                                 </CardContent>
                             </Card>
                             <Card className={classes.servicesCard}>
@@ -544,64 +534,26 @@ const Main = () => {
                                     {/* <Typography className={classes.servicesCardText}>Major Pool Renovation</Typography> */}
                                 </CardContent>
                             </Card>
-                            <Card className={classes.servicesCard}>
-                                <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={poolEquipmentSales} alt="pool with vacuum" />
-                                    <Typography className={classes.servicesCardText}>Pool Equipment Service, Sales, and Installation</Typography>
-                                </CardContent>
-                            </Card>
-                            {/* <Card className={classes.servicesCard}>
-                                <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={poolPump} alt="pool pump"/>
-                                    <Typography className={classes.servicesCardText}>Pump Installation/Maintenance</Typography>
-                                </CardContent>
-                            </Card>  */}
-                            <Card className={classes.servicesCard}>
-                                <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={liner3} alt="pool cover" />
-                                    <Typography className={classes.servicesCardText}>Safety Covers</Typography>
-                                </CardContent>
-                            </Card>
-                            <Card className={classes.servicesCardLast}>
-                                <CardContent className={classes.servicesCardContent}>
-                                    <Typography className={classes.servicesCardText}></Typography>
-                                </CardContent>
-                            </Card>
                         </div>
                     </div>
                 </div>
             </section>
 
             <span className={classes.scrollToAbout} id="about"></span>
-            {/* <BackgroundImage
-                fluid={sources[2]} 
-                className={classes.aboutBackgroundImage} 
-            > */}
+
             <section class="py-5 section-bubble3">
                 <div class="container">
                     <div className={classes.aboutWrapper}>
                         <div className={classes.aboutSectionWrapper}>
                             <Typography className={classes.aboutTitleHeader}>About Us</Typography>
                             <div className={classes.aboutTextWrapper}>
-                                <p className={classes.aboutText}>PH Pool & Spa Service has been serving the Rochester and surrounding areas since 1989.</p>
-                                <p className={classes.aboutText}>We specialize in liner replacement for inground pools, but also offer service, renovation and repair for inground pools and spas of all types and sizes.</p>
-                                <p className={classes.aboutText}>Our highly trained and experienced staff members strive to deliver the highest quality work.</p>
-                                <p className={classes.aboutText}>Call the proven professionals today...we’ll leave you wondering why you didn’t call sooner.</p>
-                            </div>
-                            {/* <div className={classes.phBizCardWrapper}>
-                                    <img className={classes.phBizCardImage} src={phBizCard} alt="buisness card" />
-                                </div> */}
-
-                            <div className={classes.bbbWrapper}>
-                                <a className={classes.bbbLink} href="https://www.bbb.org/us/ny/honeoye-falls/profile/pool-contractors/ph-pool-and-spa-service-0041-32357">
-                                    <img className={classes.bbbImage} src={bbbLogo} alt="better business bureau logo" />
-                                    <Avatar className={classes.bbbYearsCircle}>
-                                        <Typography className={classes.bbbCirleText}>A+</Typography>
-                                    </Avatar>
-                                </a>
+                                <p className={classes.aboutText}>About CG content here, Stevens family, etc.</p>
+                                <p className={classes.aboutText}>About content</p>
+                                <p className={classes.aboutText}>About content</p>
+                                <p className={classes.aboutText}>About content</p>
                             </div>
                         </div>
-                        <img className={classes.aboutImage} src={riverPhoto} alt="photo of a river" />
+                        <img className={classes.aboutImage} src={chillGrillSign} alt="photo of a river" />
                     </div>
                 </div>
             </section>
@@ -611,7 +563,7 @@ const Main = () => {
             <section class="py-5 section-bubble4">
                 <div class="container">
                     <div>
-                        <Typography className={classes.contactHeader}>Contact Us</Typography>
+                        <Typography className={classes.contactHeader}>Connect with us!</Typography>
                         <div className={classes.phoneEmailWrapper}>
                             <a href="tel:(315) 597-8946" className={classes.contactPhone}>
                                 <Button className={classes.contactButton}>
@@ -619,10 +571,9 @@ const Main = () => {
                                     Give us a Call!
                                 </Button>
                             </a>
-                            <a href="mailto:phpoolandspas@gmail.com" className={classes.emailA}>
+                            <a href="" className={classes.emailA}>
                                 <Button className={classes.contactButton}>
-                                    <EmailIcon className={classes.emailIcon} />
-                                    phpoolandspas@gmail.com
+                                    PUT INSTAGRAM HERE
                                 </Button>
                             </a>
                         </div>
@@ -635,7 +586,7 @@ const Main = () => {
                                     className={classes.reviewButton}
                                 >
                                     <div className={classes.reviewStarWrapper}>
-                                        <Typography className={classes.reviewHeader}>We'd Love to Hear From You</Typography>
+                                        <Typography className={classes.reviewHeader}>Leave us a review!</Typography>
                                         <FiveStar />
                                     </div>
                                 </Button>
