@@ -1,1 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Angkor&family=Inter&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.menuBlockWrapper {
+    display: flex;
+}
+
+.menuContent {
+    display: flex;
+    width: 50%;
+}
+
+.menuContent>img {
+    width: 100%;
+    margin-bottom: 0;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.chillBlock {}
+
+.chillMenuButton {
+    text-align: center;
+    color: black;
+    width: 100%;
+    background-color: #b9d9eb;
+    text-transform: uppercase;
+    border: none;
+}
+
+.grillMenuButton {
+    text-align: center;
+    color: black;
+    width: 100%;
+    background-color: #f03d3dcf;
+    text-transform: uppercase;
+    border: none;
+}
+
+.sprinkles {
+    animation: twinkle 5s infinite alternate ease-in-out;
+    width: 110vw !important;
+    height: auto;
+    overflow: hidden;
+}
+
+.bannerImage {
+    width: 100%;
+}
+
+@keyframes twinkle {
+    from {
+        transform: translateX(1vw);
+    }
+
+    to {
+        transform: translateX(-1vw);
+    }
+}
+
+@media(max-width:600px) {
+   
+}

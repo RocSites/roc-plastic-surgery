@@ -25,6 +25,7 @@ const withStyles = makeStyles(() => ({
     color: "white",
     justifyContent: "space-between",
     width: "100%",
+    height: "112px",
     top: 0,
     boxShadow: "1px 0 10px 0 rgb(89 98 115 / 20%)",
     zIndex: "1",

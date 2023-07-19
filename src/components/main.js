@@ -21,19 +21,21 @@ import poolEquipmentSales from '../images/poolEquipmentSales.jpg'
 import phBizCard from '../images/phBizCard.jpeg'
 import poolSafety from '../images/pool_safety2.jpg'
 import chillGrillSign from '../images/chill_grill_background.jpg'
+import iceCreamTwo from "../images/ice_cream_2.jpeg"
+import burgerImage from "../images/grill_image_1.jpeg"
 import fiveStar from '../images/fiveStar.png'
 import Divider from '@material-ui/core/Divider'
 import PhoneIcon from '@material-ui/icons/Phone'
 import EmailIcon from '@material-ui/icons/Email'
 import Avatar from '@material-ui/core/Avatar'
 import StarRateIcon from '@material-ui/icons/StarRate';
-import SprinklesSvg from '../images/sprinkles.svg'
+import SprinklesSvg from '../components/sprinkles'
 import "./main.css"
 
 const withStyles = makeStyles(() => ({
     mainRoot: {
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
     },
     landingWrapper: {
         display: "flex",
@@ -45,6 +47,7 @@ const withStyles = makeStyles(() => ({
     },
     bannerImage: {
         width: "100%",
+        marginTop: "112px"
     },
     aboutBackgroundImage: {
         width: "100%",
@@ -184,14 +187,6 @@ const withStyles = makeStyles(() => ({
         marginTop: "1.5em",
         marginBottom: "1.5em",
         background: "white"
-    },
-    servicesBulletsWrapper: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        color: "black",
-        // fontFamily: "Raleway, sans-serif",
-        margin: "20px"
     },
     serviceWrapper: {
         paddingTop: "2.5em"
@@ -427,7 +422,11 @@ const withStyles = makeStyles(() => ({
         justifyContent: "center",
         color: "black",
         fontSize: "1.25rem"
-    }
+    },
+    menuBlockWrapper: {
+        display: "flex"
+    },
+
 }))
 
 const Main = () => {
@@ -472,12 +471,12 @@ const Main = () => {
     return (
         <div className={classes.mainRoot}>
             <section class="py-5 section-bubble1">
-                <div class="container">
-                    {/* TODO, move cone down so tip is under nav */}
-                    <BackgroundImage
-                        fluid={sources}
-                        className={classes.bannerImage}
-                    >
+                <BackgroundImage
+                    fluid={sources}
+                    className={classes.bannerImage}
+                >
+                    <div class="container">
+                        {/* TODO, move cone down so tip is under nav */}
                         <div className={classes.landingWrapper}>
                             <div className={classes.landingMessageWrapper}>
                                 {/* <Typography className={classes.landingPageHeader}>Chill & Grill</Typography>
@@ -486,9 +485,8 @@ const Main = () => {
                                 <Typography className={classes.landingPageSubHeaderMobile}>& Great Food</Typography> */}
                             </div>
                         </div>
-                    </BackgroundImage>
-
-                </div>
+                    </div>
+                </BackgroundImage>
             </section>
 
             <span className={classes.scrollToServices} id="services"></span>
@@ -498,8 +496,7 @@ const Main = () => {
                     <Typography className={classes.someOfWorkHeader}>Family owned and operated, Chill & Grill serves old fashioned ice cream & great food.</Typography>
                     <Divider className={classes.serviceDivider} />
                     <div class="container">
-                        SPRINKLES
-                        {/* <SprinklesSvg/> */}
+                        <SprinklesSvg />
                     </div>
                     <div class="container">
                         <Typography className={classes.hourlyHeaderText}>OPEN DAILY</Typography>
@@ -508,13 +505,23 @@ const Main = () => {
                         <Typography className={classes.hourText}>Grill closes at 8pm everyday!</Typography>
                     </div>
                     <div class="container">
-                        SPRINKLES
-                        {/* <SprinklesSvg/> */}
+                        <SprinklesSvg />
                     </div>
-                    <div className={classes.servicesBulletsWrapper}>
-                        <Typography className={classes.menuHeaderTextMenu}>MENUS</Typography>
-                        <Button>Chill Menu</Button>
-                        <Button>Grill Menu</Button>
+                    <div class="menuBlockWrapper">
+                        <div class="menuContent chillBlock">
+                            <Button class="chillMenuButton">Chill Menu</Button>
+                        </div>
+                        <div class="menuContent">
+                            <img src={iceCreamTwo} />
+                        </div>
+                    </div>
+                    <div class="menuBlockWrapper">
+                        <div class="menuContent">
+                            <img src={burgerImage} />
+                        </div>
+                        <div class="menuContent">
+                            <Button class="grillMenuButton">Grill Menu</Button>
+                        </div>
                     </div>
                 </div>
 
