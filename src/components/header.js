@@ -21,7 +21,7 @@ const withStyles = makeStyles(() => ({
   navBarRoot: {
     position: "fixed",
     display: "flex",
-    background: "#0074eb",
+    background: "#ffffff",
     color: "white",
     justifyContent: "space-between",
     width: "100%",
@@ -78,6 +78,7 @@ const withStyles = makeStyles(() => ({
   hamburgerIcon: {
     margin: "20px",
     fontSize: "2.5rem",
+    color: "red",
     "@media(min-width: 601px)": {
       display: "none"
     }
@@ -158,6 +159,13 @@ const Header = ({ siteTitle }) => {
             onKeyDown={toggleDrawer}
           >
             <List>
+            <ListItem
+                className={classes.drawerItem}
+                button
+                onClick={() => handleClick('#services')}
+              >
+                <ListItemText primary={"Hours"} />
+              </ListItem>
               <ListItem
                 className={classes.drawerItem}
                 button

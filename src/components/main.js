@@ -27,6 +27,7 @@ import PhoneIcon from '@material-ui/icons/Phone'
 import EmailIcon from '@material-ui/icons/Email'
 import Avatar from '@material-ui/core/Avatar'
 import StarRateIcon from '@material-ui/icons/StarRate';
+import SprinklesSvg from '../images/sprinkles.svg'
 import "./main.css"
 
 const withStyles = makeStyles(() => ({
@@ -121,7 +122,10 @@ const withStyles = makeStyles(() => ({
         color: "black",
         padding: "10px",
         width: "50%",
-        margin: "auto"
+        margin: "auto",
+        "@media(max-width: 600px)": {
+            width: "90%"
+        }
     },
     landingMessageWrapper: {
         display: "flex",
@@ -181,15 +185,9 @@ const withStyles = makeStyles(() => ({
         marginBottom: "1.5em",
         background: "white"
     },
-    serviceSummary: {
-        color: "black",
-        // fontFamily: "Raleway, sans-serif",
-        textAlign: "center",
-        marginBottom: "2em",
-        fontSize: "1.25rem"
-    },
     servicesBulletsWrapper: {
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         color: "black",
         // fontFamily: "Raleway, sans-serif",
@@ -411,6 +409,24 @@ const withStyles = makeStyles(() => ({
     },
     fiveStar: {
         color: "#f5b81c"
+    },
+    hourText: {
+        display: "flex",
+        color: "black",
+        margin: "10px auto",
+        justifyContent: "center"
+    },
+    hourlyHeaderText: {
+        display: "flex",
+        justifyContent: "center",
+        color: "black",
+        fontSize: "1.25rem"
+    },
+    menuHeaderTextMenu: {
+        display: "flex",
+        justifyContent: "center",
+        color: "black",
+        fontSize: "1.25rem"
     }
 }))
 
@@ -457,6 +473,7 @@ const Main = () => {
         <div className={classes.mainRoot}>
             <section class="py-5 section-bubble1">
                 <div class="container">
+                    {/* TODO, move cone down so tip is under nav */}
                     <BackgroundImage
                         fluid={sources}
                         className={classes.bannerImage}
@@ -476,23 +493,32 @@ const Main = () => {
 
             <span className={classes.scrollToServices} id="services"></span>
             <section class="py-5 section-bubble2">
-           
+
                 <div class="container">
                     <Typography className={classes.someOfWorkHeader}>Family owned and operated, Chill & Grill serves old fashioned ice cream & great food.</Typography>
                     <Divider className={classes.serviceDivider} />
-                    <Typography className={classes.serviceSummary}>Content subheader</Typography>
-                    <div style={{border: "1px solid blue"}} className={classes.servicesBulletsWrapper}>
-                        <button>Ice Cream/Chill Menu</button>
-                        <button>Grill Menu</button>
+                    <div class="container">
+                        SPRINKLES
+                        {/* <SprinklesSvg/> */}
+                    </div>
+                    <div class="container">
+                        <Typography className={classes.hourlyHeaderText}>OPEN DAILY</Typography>
+                        <Typography className={classes.hourText}>Monday-Saturday: 11am-9pm </Typography>
+                        <Typography className={classes.hourText}> Sunday: 12pm-9pm</Typography>
+                        <Typography className={classes.hourText}>Grill closes at 8pm everyday!</Typography>
+                    </div>
+                    <div class="container">
+                        SPRINKLES
+                        {/* <SprinklesSvg/> */}
+                    </div>
+                    <div className={classes.servicesBulletsWrapper}>
+                        <Typography className={classes.menuHeaderTextMenu}>MENUS</Typography>
+                        <Button>Chill Menu</Button>
+                        <Button>Grill Menu</Button>
                     </div>
                 </div>
 
-                <div style={{border: "1px solid red"}} class="container">
-                    <Typography>HOURS</Typography>
-                </div>
-                <div style={{border: "1px solid green"}} class="container">
-                    <Typography>Sprinkles</Typography>
-                </div>
+
 
                 <div class="container">
                     <div className={classes.serviceWrapper}>
