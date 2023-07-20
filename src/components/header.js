@@ -14,6 +14,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import PhoneIcon from '@mui/icons-material/Phone';
 import FacebookIcon from "../images/facebook_icon_60.png"
 import InstagramIcon from "../images/instagram_icon.png"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+
 import "./main.css"
 
 const withStyles = makeStyles(() => ({
@@ -42,8 +44,10 @@ const withStyles = makeStyles(() => ({
   },
   navButton: {
     color: "black",
-    fontWeight: "bold",
-    textTransform: "none"
+    // fontWeight: "bold",
+    textTransform: "none",
+    margin: "auto 10px",
+    textDecoration: "none"
   },
   navBarButtonWrapper: {
     display: "flex",
@@ -115,7 +119,18 @@ const withStyles = makeStyles(() => ({
       fontSize: "0.75rem",
       margin: "auto"
     }
-  }
+  },
+  drawerLinkWrapper: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  navButtonMobile: {
+  color: "black",
+  // fontWeight: "bold",
+  textTransform: "none",
+  margin: "10px 16px",
+  textDecoration: "none"
+}
 }))
 
 
@@ -145,27 +160,23 @@ const Header = ({ siteTitle }) => {
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>
-          <Button
+          {/* <Button
             className={classes.navButton}
             onClick={() => scrollTo('#hours')}
 
           >
             Hours
-          </Button>
-          <Button
-            className={classes.navButton}
-            onClick={() => scrollTo('#menus')}
+          </Button> */}
+          <AnchorLink className={classes.navButton}
+            to="/#hours" title="Hours">
+          </AnchorLink>
+          <AnchorLink className={classes.navButton}
+            to="/#menus" title="Menus">
+          </AnchorLink>
+          <AnchorLink className={classes.navButton}
+            to="/#location" title="Location">
+          </AnchorLink>
 
-          >
-            Menus
-          </Button>
-          <Button
-            className={classes.navButton}
-            onClick={() => scrollTo('#location')}
-
-          >
-            Location
-          </Button>
           <Button
             className={classes.navCallButton}
             target="_blank" href="tel:(315) 597-8946"
@@ -216,36 +227,18 @@ const Header = ({ siteTitle }) => {
             onKeyDown={toggleDrawer}
           >
             <List>
-              <ListItem
-                className={classes.drawerItem}
-                button
-                onClick={() => handleClick('#hours')}
-              >
-                <ListItemText primary={"Hours"} />
-              </ListItem>
-              <ListItem
-                className={classes.drawerItem}
-                button
-                onClick={() => handleClick('#menus')}
-              >
-                <ListItemText primary={"Menus"} />
-              </ListItem>
-              <ListItem
-                className={classes.drawerItem}
-                button
-                // onClick={() => scrollTo('#about')}
-                onClick={() => handleClick("#location")}
-              >
-                <ListItemText primary={"Location"} />
-              </ListItem>
-              {/* <ListItem
-                className={classes.drawerItem}
-                button
-                // onClick={() => scrollTo('#about')}
-                onClick={() => handleClick("#about")}
-              >
-                <ListItemText primary={"About Us"} />
-              </ListItem> */}
+              <div className={classes.drawerLinkWrapper}>
+                <AnchorLink className={classes.navButtonMobile}
+                  to="/#hours" title="Hours">
+                </AnchorLink>
+                <AnchorLink className={classes.navButtonMobile}
+                  to="/#menus" title="Menus">
+                </AnchorLink>
+                <AnchorLink className={classes.navButtonMobile}
+                  to="/#location" title="Location">
+                </AnchorLink>
+              </div>
+
               <Button
                 class="drawerItemLogin"
                 target="_blank" href="tel:(315) 597-8946"
