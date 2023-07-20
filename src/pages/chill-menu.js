@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import chillMenu from "../images/chill_menu.jpeg"
+import "../components/main.css"
+
 
 const ChillMenu = () => (
   <Layout>

@@ -116,8 +116,8 @@ const Header = ({ siteTitle }) => {
       <div className={classes.navLeftWrapper}>
         <div className={classes.navBarTitle}>
           <Link to="/" style={{ color: '#001841', textDecoration: `none` }}>
-            {/* <img className={classes.navLogo} src={chillGrillLogoOG} alt="chill grill logo" /> */}
-            <img className={classes.navLogo} src={coneIcon} alt="chill grill logo" />
+            <img className={classes.navLogo} src={chillGrillLogoOG} alt="chill grill logo" />
+            {/* <img className={classes.navLogo} src={coneIcon} alt="chill grill logo" /> */}
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>
