@@ -386,6 +386,12 @@ const withStyles = makeStyles(() => ({
     menuBlockWrapper: {
         display: "flex"
     },
+    hourlyHeaderText: {
+        display: "flex",
+        justifyContent: "center",
+        color: "black",
+        fontSize: "1.75rem"
+    }
 
 }))
 
@@ -460,7 +466,7 @@ const Main = () => {
                         <span className={classes.scrollToAbout} id="hours"></span>
                     </div>
                     <div class="container marginBottomSmall">
-                        <Typography class="hourlyHeaderText">OPEN DAILY</Typography>
+                        <Typography className={classes.hourlyHeaderText}>OPEN DAILY</Typography>
                         <Typography className={classes.hourText}>Monday - Saturday: 11am-9pm </Typography>
                         <Typography className={classes.hourText}> Sunday: 12pm-9pm</Typography>
                         <Typography className={classes.hourText}>Grill closes at 8pm everyday!</Typography>
