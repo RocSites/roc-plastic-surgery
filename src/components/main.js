@@ -547,7 +547,7 @@ const Main = () => {
             <section class="py-5 section-bubble2">
 
                 <div className={classes.container}>
-                    <Typography className={classes.someOfWorkHeader}>Family owned and operated, <br /> Chill & Grill serves old fashioned ice cream & great food.</Typography>
+                    <Typography className={classes.someOfWorkHeader}>Family owned and operated, <br /> Chill & Grill serves old-fashioned ice cream & great food.</Typography>
                     <Divider className={classes.serviceDivider} />
                     <div className={classes.container}>
                         <SprinklesSvg />
@@ -557,7 +557,7 @@ const Main = () => {
                         <Typography className={classes.hourlyHeaderText}>OPEN DAILY</Typography>
                         <Typography className={classes.hourText}>Monday - Saturday: 11am-9pm </Typography>
                         <Typography className={classes.hourText}> Sunday: 12pm-9pm</Typography>
-                        <Typography className={classes.hourText}>Grill closes at 8pm!</Typography>
+                        <Typography className={classes.hourText}>Grill closes at 8pm</Typography>
                     </div>
                     <div className={classes.container}>
                         <SprinklesSvg />
@@ -590,7 +590,7 @@ const Main = () => {
                     <div className={classes.aboutWrapper}>
                         <div className={classes.aboutSectionWrapper}>
                             <Typography className={classes.aboutTitleHeader}>Location</Typography>
-                            <Typography className={classes.addressText}>616 E Main St, Palmyra, NY 14522</Typography>
+                            <Typography className={classes.addressText}>616 E. Main Street, Palmyra, NY 14522</Typography>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11285.550307357447!2d-77.22038615666283!3d43.06138775705887!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d12ac7aa77f46f%3A0xef195eaca8ebfd95!2sChill%20%26%20Grill!5e0!3m2!1sen!2sus!4v1689823831901!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
