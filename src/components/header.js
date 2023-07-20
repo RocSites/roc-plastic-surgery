@@ -91,6 +91,30 @@ const withStyles = makeStyles(() => ({
   },
   navLeftWrapper: {
     display: "flex",
+  },
+  navCallButton: {
+    display: "flex",
+    backgroundColor: "#f03d3dcf",
+    padding: "8px 16px",
+    color: "black",
+    textTransform: "none",
+    borderRadius: "35px",
+    height: "50px",
+    margin: "auto 20px"
+  },
+  navCallButtonMobile: {
+    display: "flex",
+    backgroundColor: "#f03d3dcf",
+    padding: "8px 16px",
+    color: "black",
+    textTransform: "none",
+    borderRadius: "35px",
+    height: "50px",
+    margin: "auto 20px",
+    "@media(min-width: 600px)": {
+      fontSize: "0.75rem",
+      margin: "auto"
+    }
   }
 }))
 
@@ -143,7 +167,7 @@ const Header = ({ siteTitle }) => {
             Location
           </Button>
           <Button
-            class="navCallButton"
+            className={classes.navCallButton}
             target="_blank" href="tel:(315) 597-8946"
           >
             <PhoneIcon class="drawerPhoneIcon" />
@@ -169,7 +193,7 @@ const Header = ({ siteTitle }) => {
       </div>
       <div className={classes.navBarHamburgerDrawerWrapper}>
         <Button
-          class="navCallButtonMobile"
+          className={classes.navCallButtonMobile}
           target="_blank" href="tel:(315) 597-8946"
         >
           <PhoneIcon class="drawerPhoneIcon" />
