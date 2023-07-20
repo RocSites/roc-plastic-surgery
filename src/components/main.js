@@ -489,14 +489,14 @@ const Main = () => {
     query { 
       desktopImage: file(relativePath: { eq: "ice_cream_1.jpeg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920) {
+          fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       mobileImage: file(relativePath: { eq: "ice_cream_1.jpeg" }) {
         childImageSharp {
-          fluid(maxWidth: 650) {
+          fluid(maxWidth: 650, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -547,7 +547,7 @@ const Main = () => {
             <section class="py-5 section-bubble2">
 
                 <div className={classes.container}>
-                    <Typography className={classes.someOfWorkHeader}>Family owned and operated, <br /> Chill & Grill serves old-fashioned ice cream & great food.</Typography>
+                    <Typography className={classes.someOfWorkHeader}>Family owned and operated, <br /> Chill & Grill serves oldfashioned ice cream & great food.</Typography>
                     <Divider className={classes.serviceDivider} />
                     <div className={classes.container}>
                         <SprinklesSvg />
