@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Angkor&family=Inter&display=swap');
 
-html,body
-{
+html,
+body {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 .container {
@@ -91,6 +91,32 @@ html,body
     padding: 8px 16px;
     color: black;
     text-decoration: none;
+}
+
+.navCallButton {
+    display: flex;
+    background-color: #f03d3dcf;
+    padding: 8px 16px;
+    color: black;
+    text-decoration: none;
+    border-radius: 35px;
+    height: 50px;
+    margin: auto 20px;
+}
+
+.navCallButtonMobile {
+    display: flex;
+    background-color: #f03d3dcf;
+    padding: 8px 16px;
+    color: black;
+    text-decoration: none;
+    border-radius: 35px;
+    height: 50px;
+    margin: auto 20px;
+}
+
+.navCallButton>span {
+    margin: auto;
 }
 
 .aboutTitleHeader {
@@ -194,13 +220,20 @@ html,body
     height: 30px;
     width: 30px;
     margin: 0 5px;
-    margin-bottom: 1px; 
+    margin-bottom: 1px;
 }
 
 .socialNav {
     height: 30px;
     width: 30px;
     margin: 0 10px;
+}
+
+.socialNavFb {
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+    margin-bottom: 1px;
 }
 
 .connectHeader {
@@ -239,5 +272,10 @@ html,body
 
     .socialLinkWrapperNav {
         display: none;
+    }
+
+    .navCallButton,
+    .navCallButtonMobile {
+        font-size: 0.75rem;
     }
 }

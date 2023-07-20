@@ -142,6 +142,13 @@ const Header = ({ siteTitle }) => {
           >
             Location
           </Button>
+          <Button
+            class="navCallButton"
+            target="_blank" href="tel:(315) 597-8946"
+          >
+            <PhoneIcon class="drawerPhoneIcon" />
+            Call Us
+          </Button>
           {/* < Button
             className={classes.navButton}
             onClick={() => scrollTo('#about')}
@@ -157,10 +164,17 @@ const Header = ({ siteTitle }) => {
           <img class="socialNav" src={InstagramIcon} />
         </a>
         <a href="https://www.facebook.com/ChillNGrillPal" target="_blank" class="socialLink">
-          <img class="socialNav" src={FacebookIcon} />
+          <img class="socialNavFb" src={FacebookIcon} />
         </a>
       </div>
       <div className={classes.navBarHamburgerDrawerWrapper}>
+        <Button
+          class="navCallButtonMobile"
+          target="_blank" href="tel:(315) 597-8946"
+        >
+          <PhoneIcon class="drawerPhoneIcon" />
+          Call Us
+        </Button>
         <MenuIcon
           className={classes.hamburgerIcon}
           onClick={toggleDrawer}
