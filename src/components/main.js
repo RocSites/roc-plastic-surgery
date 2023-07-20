@@ -537,7 +537,7 @@ const Main = () => {
             <section class="py-5 section-bubble2">
 
                 <div className={classes.container}>
-                    <Typography className={classes.someOfWorkHeader}>Family owned and operated, <br /> Chill & Grill serves oldfashioned ice cream & great food.</Typography>
+                    <Typography className={classes.someOfWorkHeader}>Family owned and operated, <br /> Chill & Grill serves old-fashioned ice cream & great food.</Typography>
                     <Divider className={classes.serviceDivider} />
                     <div className={classes.container}>
                         <SprinklesSvg />
