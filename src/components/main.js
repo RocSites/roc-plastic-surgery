@@ -391,8 +391,90 @@ const withStyles = makeStyles(() => ({
         justifyContent: "center",
         color: "black",
         fontSize: "1.75rem"
-    }
+    },
+    aboutTitleHeader: {
+        textAlign: "center",
+        fontSize: "2rem",
+        color: "black",
+        textTransform: "uppercase",
+        marginBottom: 0
+    },
+    addressText: {
+        textAlign: "center",
+        margin: "40px 0"
+    },
+    aboutWrapper: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center"
+    },
+    scrollToLocation: {
+        height: "100px",
+        flexDirection: "column"
+    },
+    connectHeader: {
+        fontSize: "2rem",
+        textAlign: "center",
+        color: "black",
+        textTransform: "uppercase"
+    },
+    socialLinkWrapper: {
+        display: "flex",
+        justifyContent: "center",
+        margin: "20px 0 40px 0"
+    },
+    aboutSectionWrapper: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        "& iframe": {
+            "@media(max-width:600px)": {
+                width: "90%",
+                margin: "auto"
+            }
+        },
 
+    },
+    reviewHeader: {
+        fontSize: "1.2rem",
+        textTransform: "none",
+        color: "white",
+        margin: 0,
+    },
+    socialFooterMargin: {
+        height: "40px",
+        width: "40px",
+        margin: "10px auto"
+    },
+    socialFooter: {
+        height: "40px",
+        width: "40px",
+        margin: "0 10px"
+    },
+    socialLink: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    reviewButton: {
+        backgroundColor: "#333333",
+        borderRadius: "25px",
+        padding: "20px",
+        marginBottom: "20px",
+        border: "none"
+    },
+    container: {
+        display: "flex",
+        flexDirection: "column",
+        margin: "20px 0"
+    },
+    containerMarginBottomSmall: {
+        display: "flex",
+        flexDirection: "column",
+        margin: "20px 0",
+        marginBottom: "80px"
+    }
 }))
 
 const Main = () => {
@@ -441,7 +523,7 @@ const Main = () => {
                     fluid={sources}
                     className={classes.bannerImage}
                 >
-                    <div class="container">
+                    <div className={classes.container}>
                         {/* TODO, move cone down so tip is under nav */}
                         <div className={classes.landingWrapper}>
                             <div className={classes.landingMessageWrapper}>
@@ -458,20 +540,20 @@ const Main = () => {
             <span className={classes.scrollToServices} id="services"></span>
             <section class="py-5 section-bubble2">
 
-                <div class="container">
+                <div className={classes.container}>
                     <Typography className={classes.someOfWorkHeader}>Family owned and operated, <br /> Chill & Grill serves old fashioned ice cream & great food.</Typography>
                     <Divider className={classes.serviceDivider} />
-                    <div class="container">
+                    <div className={classes.container}>
                         <SprinklesSvg />
                         <span className={classes.scrollToAbout} id="hours"></span>
                     </div>
-                    <div class="container marginBottomSmall">
+                    <div className={classes.containerMarginBottomSmall}>
                         <Typography className={classes.hourlyHeaderText}>OPEN DAILY</Typography>
                         <Typography className={classes.hourText}>Monday - Saturday: 11am-9pm </Typography>
                         <Typography className={classes.hourText}> Sunday: 12pm-9pm</Typography>
                         <Typography className={classes.hourText}>Grill closes at 8pm everyday!</Typography>
                     </div>
-                    <div class="container">
+                    <div className={classes.container}>
                         <SprinklesSvg />
                         <span className={classes.scrollToAbout} id="menus"></span>
                     </div>
@@ -495,14 +577,14 @@ const Main = () => {
                 </div>
 
             </section>
-            <span class="scrollToLocation" id="location"></span>
+            <span className={classes.scrollToLocation} id="location"></span>
 
             <section class="py-5 section-bubble3">
-                <div class="container">
-                    <div class="aboutWrapper">
-                        <div class="aboutSectionWrapper">
-                            <Typography class="aboutTitleHeader">Location</Typography>
-                            <Typography class="addressText">616 E Main St, Palmyra, NY 14522</Typography>
+                <div className={classes.container}>
+                    <div className={classes.aboutWrapper}>
+                        <div className={classes.aboutSectionWrapper}>
+                            <Typography className={classes.aboutTitleHeader}>Location</Typography>
+                            <Typography className={classes.addressText}>616 E Main St, Palmyra, NY 14522</Typography>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11285.550307357447!2d-77.22038615666283!3d43.06138775705887!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d12ac7aa77f46f%3A0xef195eaca8ebfd95!2sChill%20%26%20Grill!5e0!3m2!1sen!2sus!4v1689823831901!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
@@ -512,9 +594,9 @@ const Main = () => {
             {/* </BackgroundImage> */}
             <span className={classes.scrollToContact} id="contactForm"></span>
             <section class="py-5 section-bubble4">
-                <div class="container">
+                <div className={classes.container}>
                     <div>
-                        <Typography class="connectHeader">Connect With Us</Typography>
+                        <Typography className={classes.connectHeader}>Connect With Us</Typography>
                         <div className={classes.phoneEmailWrapper}>
                             <a href="tel:(315) 597-8946" className={classes.contactPhone}>
                                 <Button className={classes.contactButton}>
@@ -522,12 +604,12 @@ const Main = () => {
                                     (315) 597-8946
                                 </Button>
                             </a>
-                            <div class="socialLinkWrapper">
-                                <a href="https://www.instagram.com/thatsasmall/?hl=en" target="_blank" class="socialLink">
-                                    <img class="socialFooter" src={InstagramIcon} />
+                            <div className={classes.socialLinkWrapper}>
+                                <a href="https://www.instagram.com/thatsasmall/?hl=en" target="_blank" className={classes.socialLink}>
+                                    <img className={classes.socialFooter} src={InstagramIcon} />
                                 </a>
-                                <a href="https://www.facebook.com/ChillNGrillPal" target="_blank" class="socialLink">
-                                    <img class="socialFooter" src={FacebookIcon} />
+                                <a href="https://www.facebook.com/ChillNGrillPal" target="_blank" className={classes.socialLink}>
+                                    <img className={classes.socialFooter} src={FacebookIcon} />
                                 </a>
                             </div>
 
@@ -538,11 +620,11 @@ const Main = () => {
                                 target="_blank"
                             >
                                 <Button
-                                    class="reviewButton"
+                                    className={classes.reviewButton}
                                 >
                                     <div className={classes.reviewStarWrapper}>
-                                        <Typography class="reviewHeader">Leave us a review!</Typography>
-                                        <img class="socialFooter marginAuto" src={GoogleIcon} />
+                                        <Typography className={classes.reviewHeader}>Leave us a review!</Typography>
+                                        <img className={classes.socialFooterMargin} src={GoogleIcon} />
                                         <FiveStar />
                                     </div>
                                 </Button>

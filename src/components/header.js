@@ -14,6 +14,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import PhoneIcon from '@mui/icons-material/Phone';
 import FacebookIcon from "../images/facebook_icon_60.png"
 import InstagramIcon from "../images/instagram_icon.png"
+import "./main.css"
 
 const withStyles = makeStyles(() => ({
   "@global": {
