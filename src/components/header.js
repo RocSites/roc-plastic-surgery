@@ -68,7 +68,6 @@ const withStyles = makeStyles(() => ({
     display: "flex",
     width: "60px",
     margin: "auto",
-    borderRadius: "30px"
   },
   drawerItem: {
     "&:hover": {
@@ -115,7 +114,7 @@ const withStyles = makeStyles(() => ({
     borderRadius: "35px",
     height: "50px",
     margin: "auto 20px",
-    "@media(min-width: 600px)": {
+    "@media(max-width: 600px)": {
       fontSize: "0.75rem",
       margin: "auto"
     }
