@@ -10,6 +10,7 @@ import ContactForm from './contactForm'
 import Button from '@material-ui/core/Button'
 import chillGrillSign from '../images/chill_grill_background.jpg'
 import iceCreamTwo from "../images/ice_cream_2.jpeg"
+import iceCreamOne from "../images/ice_cream_1.jpeg"
 import iceCreamSpoons from "../images/ice_cream_spoons.jpeg"
 import burgerImage from "../images/grill_image_1.jpeg"
 import fiveStar from '../images/fiveStar.png'
@@ -34,10 +35,6 @@ const withStyles = makeStyles(() => ({
         flexDirection: "column",
         margin: "auto"
 
-    },
-    bannerImage: {
-        width: "100%",
-        marginTop: "112px"
     },
     aboutBackgroundImage: {
         width: "100%",
@@ -480,6 +477,13 @@ const withStyles = makeStyles(() => ({
         flexDirection: "column",
         margin: "20px 0",
         marginBottom: "80px"
+    },
+    landingImage: {
+        width: "100%",
+        objectFit: "cover",
+        aspectRatio: "1/1",
+        height: "100vh",
+        marginTop: "112px"
     }
 }))
 
@@ -524,23 +528,9 @@ const Main = () => {
 
     return (
         <div className={classes.mainRoot}>
+            <img src={iceCreamOne} className={classes.landingImage} />
             <section class="py-5 section-bubble1">
-                <BackgroundImage
-                    fluid={sources}
-                    className={classes.bannerImage}
-                >
-                    <div className={classes.container}>
-                        {/* TODO, move cone down so tip is under nav */}
-                        <div className={classes.landingWrapper}>
-                            <div className={classes.landingMessageWrapper}>
-                                {/* <Typography className={classes.landingPageHeader}>Chill & Grill</Typography>
-                                <Typography className={classes.landingPageSubHeader}>Old Fashioned Ice Cream & Great Food</Typography>
-                                <Typography className={classes.landingPageSubHeaderMobile}>Old Fashioned Ice Cream</Typography>
-                                <Typography className={classes.landingPageSubHeaderMobile}>& Great Food</Typography> */}
-                            </div>
-                        </div>
-                    </div>
-                </BackgroundImage>
+    
             </section>
 
             <span className={classes.scrollToServices} id="services"></span>
