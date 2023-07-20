@@ -6,6 +6,13 @@
     margin: 20px 0;
 }
 
+.hourlyHeaderText {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 1.75rem;
+}
+
 .menuBlockWrapper {
     display: flex;
 }
@@ -13,6 +20,8 @@
 .menuContent {
     display: flex;
     width: 50%;
+    align-items: center;
+    justify-content: center;
 }
 
 .menuContent>img {
@@ -22,24 +31,21 @@
     aspect-ratio: 1/1;
 }
 
-.chillBlock {}
-
-.chillMenuButton {
-    text-align: center;
-    color: black;
-    width: 100%;
+.chillBlock {
     background-color: #b9d9eb;
-    text-transform: uppercase;
-    border: none;
 }
 
-.grillMenuButton {
+.grillBlock {
+    background-color: #f03d3dcf;
+}
+
+.menuLink {
     text-align: center;
     color: black;
-    width: 100%;
-    background-color: #f03d3dcf;
     text-transform: uppercase;
     border: none;
+    text-decoration: none;
+    font-size: 3rem;
 }
 
 .sprinkles {
@@ -53,6 +59,147 @@
     width: 100%;
 }
 
+.menuHeader {
+    margin-top: 150px;
+    text-align: center;
+}
+
+.menuImage {
+    width: 100%;
+}
+
+.drawerPhoneIcon {
+    margin-right: 5px;
+    width: 25px;
+}
+
+.marginBottomSmall {
+    margin-bottom: 80px;
+}
+
+.drawerItemLogin {
+    display: flex;
+    background-color: #f03d3dcf;
+    padding: 8px 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.aboutTitleHeader {
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.aboutWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.scrollToLocation {
+    height: 100px;
+    background-color: white;
+}
+
+.aboutSectionWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.drawerItemLogin {}
+
+.reviewButton {
+    background-color: #333333;
+    border-radius: 25px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.reviewHeader {
+    font-size: 1.2rem;
+    text-transform: none;
+    color: white;
+    margin: 0;
+}
+
+.footerRoot {
+    display: flex;
+    background-color: #333333;
+    color: white;
+    height: 110px;
+}
+
+.rocsitesText {
+    font-size: 0.7rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.rocsitesText a {
+    color: white;
+}
+
+.socialFooter {
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+}
+
+.marginAuto {
+    margin: 10px auto;
+}
+
+.socialLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialLinkWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 40px 0;
+}
+
+.socialLinkWrapperNav {
+    display: flex;
+    justify-content: center;
+    margin: auto 20px;
+}
+
+.socialLinkWrapperNavMobile {
+    display: flex;
+    margin: 15px;
+}
+
+.socialDrawer {
+    height: 30px;
+    width: 30px;
+    margin: 0 5px;
+}
+
+.socialNav {
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+}
+
+.connectHeader {
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+}
+
+.addressText {
+    text-align: center;
+    margin: 40px 0;
+}
+
 @keyframes twinkle {
     from {
         transform: translateX(1vw);
@@ -64,5 +211,18 @@
 }
 
 @media(max-width:600px) {
-   
+    .menuLink {
+        font-size: 1.25rem;
+    }
+
+    .socialLink {}
+
+    .aboutSectionWrapper iframe {
+        width: 90%;
+        margin: auto;
+    }
+
+    .socialLinkWrapperNav {
+        display: none;
+    }
 }

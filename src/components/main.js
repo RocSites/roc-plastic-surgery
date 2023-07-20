@@ -2,34 +2,24 @@ import React from 'react'
 import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles'
+import { Link } from "gatsby"
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import ContactForm from './contactForm'
 import Button from '@material-ui/core/Button'
-import liner1 from '../images/ph_liner_install_done.jpeg'
-import liner2 from '../images/ph_pool_kids.jpeg'
-import liner3 from '../images/liner_drone.jpg'
-import liner4 from '../images/ph_liner_2_river.jpeg'
-import liner5 from '../images/liner_install_1.jpeg'
-import liner6 from '../images/liner6.jpeg'
-import linerFlower from '../images/liner_flower.jpg'
-import bbbLogo from '../images/AB-seal-horz.svg'
-import poolVacuum from '../images/pool_cleaning.jpg'
-import poolPump from '../images/pool_pump.jpg'
-import poolEquipmentSales from '../images/poolEquipmentSales.jpg'
-import phBizCard from '../images/phBizCard.jpeg'
-import poolSafety from '../images/pool_safety2.jpg'
 import chillGrillSign from '../images/chill_grill_background.jpg'
 import iceCreamTwo from "../images/ice_cream_2.jpeg"
+import iceCreamSpoons from "../images/ice_cream_spoons.jpeg"
 import burgerImage from "../images/grill_image_1.jpeg"
 import fiveStar from '../images/fiveStar.png'
 import Divider from '@material-ui/core/Divider'
 import PhoneIcon from '@material-ui/icons/Phone'
-import EmailIcon from '@material-ui/icons/Email'
-import Avatar from '@material-ui/core/Avatar'
 import StarRateIcon from '@material-ui/icons/StarRate';
 import SprinklesSvg from '../components/sprinkles'
+import FacebookIcon from "../images/facebook_icon_60.png"
+import InstagramIcon from "../images/instagram_icon.png"
+import GoogleIcon from "../images/google_icon.png"
 import "./main.css"
 
 const withStyles = makeStyles(() => ({
@@ -71,20 +61,6 @@ const withStyles = makeStyles(() => ({
         textAlign: "center",
         fontSize: "1.5rem",
         marginBottom: "20px"
-    },
-    aboutSectionWrapper: {
-        display: "flex",
-        width: "50%",
-        flexDirection: "column",
-        "@media(max-width: 600px)": {
-            width: "100%"
-        }
-    },
-    aboutTitleHeader: {
-        textAlign: "center",
-        fontSize: "2rem",
-        fontWeight: "bold",
-        color: "black"
     },
     aboutTextWrapper: {
         display: "flex",
@@ -254,11 +230,6 @@ const withStyles = makeStyles(() => ({
         width: "100%",
         backgroundColor: "#add8e685"
     },
-    contactHeader: {
-        fontSize: "2.0rem",
-        textAlign: "center",
-        color: "#333333"
-    },
     phoneEmailWrapper: {
         display: "flex",
         justifyContent: "center",
@@ -301,18 +272,6 @@ const withStyles = makeStyles(() => ({
         margin: "auto",
         textAlign: "center",
         alignItems: "center",
-    },
-    reviewButton: {
-        backgroundColor: "#0074eb",
-        borderRadius: "25px",
-        padding: "20px",
-        marginBottom: "20px"
-    },
-    reviewHeader: {
-        fontSize: "1.2rem",
-        color: "#333333",
-        fontWeight: "bold",
-        textTransform: "none"
     },
     reviewClickText: {
         textTransform: "none"
@@ -409,7 +368,8 @@ const withStyles = makeStyles(() => ({
         display: "flex",
         color: "black",
         margin: "10px auto",
-        justifyContent: "center"
+        justifyContent: "center",
+        fontSize: "1.25rem"
     },
     hourlyHeaderText: {
         display: "flex",
@@ -493,100 +453,52 @@ const Main = () => {
             <section class="py-5 section-bubble2">
 
                 <div class="container">
-                    <Typography className={classes.someOfWorkHeader}>Family owned and operated, Chill & Grill serves old fashioned ice cream & great food.</Typography>
+                    <Typography className={classes.someOfWorkHeader}>Family owned and operated, <br /> Chill & Grill serves old fashioned ice cream & great food.</Typography>
                     <Divider className={classes.serviceDivider} />
                     <div class="container">
                         <SprinklesSvg />
+                        <span className={classes.scrollToAbout} id="hours"></span>
                     </div>
-                    <div class="container">
-                        <Typography className={classes.hourlyHeaderText}>OPEN DAILY</Typography>
-                        <Typography className={classes.hourText}>Monday-Saturday: 11am-9pm </Typography>
+                    <div class="container marginBottomSmall">
+                        <Typography class="hourlyHeaderText">OPEN DAILY</Typography>
+                        <Typography className={classes.hourText}>Monday - Saturday: 11am-9pm </Typography>
                         <Typography className={classes.hourText}> Sunday: 12pm-9pm</Typography>
                         <Typography className={classes.hourText}>Grill closes at 8pm everyday!</Typography>
                     </div>
                     <div class="container">
                         <SprinklesSvg />
+                        <span className={classes.scrollToAbout} id="menus"></span>
                     </div>
+
                     <div class="menuBlockWrapper">
-                        <div class="menuContent chillBlock">
-                            <Button class="chillMenuButton">Chill Menu</Button>
-                        </div>
+                        <Link to="/chill-menu" class="menuContent menuLink chillBlock">
+                            Chill Menu
+                        </Link>
                         <div class="menuContent">
-                            <img src={iceCreamTwo} />
+                            <img src={iceCreamSpoons} />
                         </div>
                     </div>
                     <div class="menuBlockWrapper">
                         <div class="menuContent">
                             <img src={burgerImage} />
                         </div>
-                        <div class="menuContent">
-                            <Button class="grillMenuButton">Grill Menu</Button>
-                        </div>
+                        <Link to="/grill-menu" class="menuContent menuLink grillBlock">
+                            Grill Menu
+                        </Link>
                     </div>
                 </div>
 
-
-
-                <div class="container">
-                    <div className={classes.serviceWrapper}>
-                        <div>Add new pictures here, alternate with words like mitchells dougDesignText</div>
-                        <div className={classes.servicesListWrapper}>
-                            <Card className={classes.servicesCard}>
-                                <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={liner4} alt="pool with cover" />
-                                    <Typography className={classes.servicesCardText}>Title of image</Typography>
-                                </CardContent>
-                            </Card>
-                            <Card className={classes.servicesCard}>
-                                <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={liner2} alt="child swimming" />
-                                    <Typography className={classes.servicesCardText}>Title of image</Typography>
-                                </CardContent>
-                            </Card>
-                            <Card className={classes.servicesCard}>
-                                <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={liner6} alt="pool liner" />
-                                    <Typography className={classes.servicesCardText}>Title of image</Typography>
-                                </CardContent>
-                            </Card>
-                            <Card className={classes.servicesCard}>
-                                <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={linerFlower} alt="pool liner" />
-                                    {/* <Typography className={classes.servicesCardText}>Custom Pool Liners by PH</Typography> */}
-                                </CardContent>
-                            </Card>
-                            <Card className={classes.servicesCard}>
-                                <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={liner5} alt="pool liner install" />
-                                    <Typography className={classes.servicesCardText}>Title of image</Typography>
-                                </CardContent>
-                            </Card>
-                            <Card className={classes.servicesCard}>
-                                <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={liner1} alt="pool liner install" />
-                                    {/* <Typography className={classes.servicesCardText}>Major Pool Renovation</Typography> */}
-                                </CardContent>
-                            </Card>
-                        </div>
-                    </div>
-                </div>
             </section>
-
-            <span className={classes.scrollToAbout} id="about"></span>
+            <span class="scrollToLocation" id="location"></span>
 
             <section class="py-5 section-bubble3">
                 <div class="container">
-                    <div className={classes.aboutWrapper}>
-                        <div className={classes.aboutSectionWrapper}>
-                            <Typography className={classes.aboutTitleHeader}>About Us</Typography>
-                            <div className={classes.aboutTextWrapper}>
-                                <p className={classes.aboutText}>About CG content here, Stevens family, etc.</p>
-                                <p className={classes.aboutText}>About content</p>
-                                <p className={classes.aboutText}>About content</p>
-                                <p className={classes.aboutText}>About content</p>
-                            </div>
+                    <div class="aboutWrapper">
+                        <div class="aboutSectionWrapper">
+                            <Typography class="aboutTitleHeader">Location</Typography>
+                            <Typography class="addressText">616 E Main St, Palmyra, NY 14522</Typography>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11285.550307357447!2d-77.22038615666283!3d43.06138775705887!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d12ac7aa77f46f%3A0xef195eaca8ebfd95!2sChill%20%26%20Grill!5e0!3m2!1sen!2sus!4v1689823831901!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-                        <img className={classes.aboutImage} src={chillGrillSign} alt="photo of a river" />
                     </div>
                 </div>
             </section>
@@ -596,30 +508,35 @@ const Main = () => {
             <section class="py-5 section-bubble4">
                 <div class="container">
                     <div>
-                        <Typography className={classes.contactHeader}>Connect with us!</Typography>
+                        <Typography class="connectHeader">Connect With Us</Typography>
                         <div className={classes.phoneEmailWrapper}>
                             <a href="tel:(315) 597-8946" className={classes.contactPhone}>
                                 <Button className={classes.contactButton}>
                                     <PhoneIcon className={classes.phoneIcon} />
-                                    Give us a Call!
+                                    (315) 597-8946
                                 </Button>
                             </a>
-                            <a href="" className={classes.emailA}>
-                                <Button className={classes.contactButton}>
-                                    PUT INSTAGRAM HERE
-                                </Button>
-                            </a>
+                            <div class="socialLinkWrapper">
+                                <a href="https://www.instagram.com/thatsasmall/?hl=en" target="_blank" class="socialLink">
+                                    <img class="socialFooter" src={InstagramIcon} />
+                                </a>
+                                <a href="https://www.facebook.com/ChillNGrillPal" target="_blank" class="socialLink">
+                                    <img class="socialFooter" src={FacebookIcon} />
+                                </a>
+                            </div>
+
                         </div>
                         <div className={classes.reviewsWrapper}>
                             <a className={classes.reviewLink}
-                                href=""
+                                href="https://www.google.com/search?q=chill+grill+palmyra&sxsrf=AB5stBhx8d0odqQLN5k6zp0SbZv3yaggCQ%3A1689826878596&ei=Pra4ZMn5I9Gk5NoPvum8mA0&oq=chill+gril&gs_lp=Egxnd3Mtd2l6LXNlcnAiCmNoaWxsIGdyaWwqAggAMgQQIxgnMgQQIxgnMgQQIxgnMgUQABiABDIWEC4YgAQYFBiHAhixAxiDARjHARivATIFEAAYgAQyCBAuGNQCGIAEMgUQABiABDIQEC4YFBivARjHARiHAhiABDILEC4YgAQYxwEYrwFI9xxQkApYwBJwA3gBkAEAmAGmAaABmAqqAQQwLjEwuAEByAEA-AEBwgIKEAAYRxjWBBiwA8ICBxAjGIoFGCfCAggQABiKBRiRAsICCxAAGIoFGLEDGIMBwgIREC4YgAQYsQMYgwEYxwEY0QPCAgsQABiABBixAxiDAcICCBAAGIAEGLEDwgIHEC4YigUYQ8ICERAuGIMBGMcBGLEDGNEDGIAEwgIOEC4YgAQYsQMYxwEY0QPCAhAQLhiABBgUGIcCGMcBGK8BwgIOEAAYgAQYsQMYgwEYyQPCAggQABiKBRiSA8ICBxAAGIoFGEPCAgoQABiABBgUGIcCwgIQEC4YgAQYsQMYxwEY0QMYCsICExAuGBQYrwEYxwEYhwIYsQMYgATCAgsQLhiABBixAxiDAcICDRAAGIAEGLEDGIMBGAriAwQYACBBiAYBkAYI&sclient=gws-wiz-serp#lrd=0x89d12ac7aa77f46f:0xef195eaca8ebfd95,1,,,,"
                                 target="_blank"
                             >
                                 <Button
-                                    className={classes.reviewButton}
+                                    class="reviewButton"
                                 >
                                     <div className={classes.reviewStarWrapper}>
-                                        <Typography className={classes.reviewHeader}>Leave us a review!</Typography>
+                                        <Typography class="reviewHeader">Leave us a review!</Typography>
+                                        <img class="socialFooter marginAuto" src={GoogleIcon} />
                                         <FiveStar />
                                     </div>
                                 </Button>

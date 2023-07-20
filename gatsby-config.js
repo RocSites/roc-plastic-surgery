@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `PH Pool & Spa Service`,
-    description: `PH Pool & Spa Service has been serving the Rochester, New York and surrounding areas since 1989.`,
+    title: `Chill & Grill`,
+    description: `A family owned and operated ice cream shop and grill.`,
     author: `Doug Kellermeyer`,
   },
   plugins: [
@@ -27,7 +27,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/water_icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/cone_icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,

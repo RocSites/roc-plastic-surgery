@@ -82,11 +82,11 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className={classes.layoutRoot}>
         <main className={classes.mainContent}>{children}</main>
-        <footer className={classes.footerRoot}>
+        <footer class="footerRoot">
           <div className={classes.footerContent}>
             {/* <a href="tel:(585) 624-9870" className={classes.footerPhone}>(585) 624-9870</a> */}
-            <p className={classes.copyrightText}> © {new Date().getFullYear()}, Chill & Grill</p>
-            <p className={classes.dougDesignText}>Website created and maintained by <span><a href="https://www.rocsites.com/" target="_blank">Rocsites</a></span></p>
+            <p className={classes.copyrightText}> © {new Date().getFullYear()} Chill & Grill</p>
+            <p class="rocsitesText">Website created and maintained by <span><a href="https://www.rocsites.com/" target="_blank">Rocsites</a></span></p>
           </div>
         </footer>
       </div>

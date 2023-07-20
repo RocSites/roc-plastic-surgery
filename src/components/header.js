@@ -5,11 +5,15 @@ import { makeStyles } from '@material-ui/core'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import Button from '@material-ui/core/Button'
 import chillGrillLogoOG from '../images/chill_logo_og.jpeg'
+import coneIcon from "../images/cone_icon.png"
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
+import PhoneIcon from '@mui/icons-material/Phone';
+import FacebookIcon from "../images/facebook_icon_60.png"
+import InstagramIcon from "../images/instagram_icon.png"
 
 const withStyles = makeStyles(() => ({
   "@global": {
@@ -22,7 +26,7 @@ const withStyles = makeStyles(() => ({
     position: "fixed",
     display: "flex",
     background: "#ffffff",
-    color: "white",
+    color: "black",
     justifyContent: "space-between",
     width: "100%",
     height: "112px",
@@ -36,7 +40,7 @@ const withStyles = makeStyles(() => ({
     padding: `1.45rem 1.0875rem`,
   },
   navButton: {
-    color: "#ffffff",
+    color: "black",
     fontWeight: "bold",
     textTransform: "none"
   },
@@ -63,13 +67,13 @@ const withStyles = makeStyles(() => ({
   },
   drawerItem: {
     "&:hover": {
-      backgroundImage: "blue",
-      border: "1px solid #979797",
+      backgroundImage: "#f03d3dcf",
+      border: "1px solid ##f03d3dcf",
       color: "black"
     },
     "&:selected:hover": {
-      backgroundImage: "blue",
-      border: "1px solid #979797",
+      backgroundImage: "#f03d3dcf",
+      border: "1px solid ##f03d3dcf",
       color: "black"
     }
   },
@@ -111,36 +115,49 @@ const Header = ({ siteTitle }) => {
       <div className={classes.navLeftWrapper}>
         <div className={classes.navBarTitle}>
           <Link to="/" style={{ color: '#001841', textDecoration: `none` }}>
-            <img className={classes.navLogo} src={chillGrillLogoOG} alt="chill grill logo" />
+            {/* <img className={classes.navLogo} src={chillGrillLogoOG} alt="chill grill logo" /> */}
+            <img className={classes.navLogo} src={coneIcon} alt="chill grill logo" />
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>
           <Button
             className={classes.navButton}
-            onClick={() => scrollTo('#services')}
+            onClick={() => scrollTo('#hours')}
+
+          >
+            Hours
+          </Button>
+          <Button
+            className={classes.navButton}
+            onClick={() => scrollTo('#menus')}
 
           >
             Menus
           </Button>
-          < Button
+          <Button
+            className={classes.navButton}
+            onClick={() => scrollTo('#location')}
+
+          >
+            Location
+          </Button>
+          {/* < Button
             className={classes.navButton}
             onClick={() => scrollTo('#about')}
 
           >
             About Us
-          </Button>
-          <Button
-            className={classes.navButton}
-            onClick={() => scrollTo('#contactForm')}
-
-          >
-            Contact Us
-          </Button>
+          </Button> */}
         </div>
       </div>
 
-      <div>
-        social icons here
+      <div class="socialLinkWrapperNav">
+        <a href="https://www.instagram.com/thatsasmall/?hl=en" target="_blank" class="socialLink">
+          <img class="socialNav" src={InstagramIcon} />
+        </a>
+        <a href="https://www.facebook.com/ChillNGrillPal" target="_blank" class="socialLink">
+          <img class="socialNav" src={FacebookIcon} />
+        </a>
       </div>
       <div className={classes.navBarHamburgerDrawerWrapper}>
         <MenuIcon
@@ -160,36 +177,53 @@ const Header = ({ siteTitle }) => {
             onKeyDown={toggleDrawer}
           >
             <List>
-            <ListItem
+              <ListItem
                 className={classes.drawerItem}
                 button
-                onClick={() => handleClick('#services')}
+                onClick={() => handleClick('#hours')}
               >
                 <ListItemText primary={"Hours"} />
               </ListItem>
               <ListItem
                 className={classes.drawerItem}
                 button
-                onClick={() => handleClick('#services')}
+                onClick={() => handleClick('#menus')}
               >
-                <ListItemText primary={"Menu"} />
+                <ListItemText primary={"Menus"} />
               </ListItem>
               <ListItem
+                className={classes.drawerItem}
+                button
+                // onClick={() => scrollTo('#about')}
+                onClick={() => handleClick("#location")}
+              >
+                <ListItemText primary={"Location"} />
+              </ListItem>
+              {/* <ListItem
                 className={classes.drawerItem}
                 button
                 // onClick={() => scrollTo('#about')}
                 onClick={() => handleClick("#about")}
               >
                 <ListItemText primary={"About Us"} />
-              </ListItem>
-              <ListItem
-                className={classes.drawerItem}
-                button
-                onClick={() => handleClick('#contactForm')}
+              </ListItem> */}
+              <Button
+                class="drawerItemLogin"
+                target="_blank" href="tel:(315) 597-8946"
               >
-                <ListItemText primary={"Contact Us"} />
-              </ListItem>
+                <PhoneIcon class="drawerPhoneIcon" />
+                Call Us
+              </Button>
+              <div class="socialLinkWrapperNavMobile">
+                <a href="https://www.instagram.com/thatsasmall/?hl=en" target="_blank" class="socialLink">
+                  <img class="socialDrawer" src={InstagramIcon} />
+                </a>
+                <a href="https://www.facebook.com/ChillNGrillPal" target="_blank" class="socialLink">
+                  <img class="socialDrawer" src={FacebookIcon} />
+                </a>
+              </div>
             </List>
+
           </div>
         </Drawer>
 
