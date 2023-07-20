@@ -220,7 +220,7 @@ const Header = ({ siteTitle }) => {
                   <img class="socialDrawer" src={InstagramIcon} />
                 </a>
                 <a href="https://www.facebook.com/ChillNGrillPal" target="_blank" class="socialLink">
-                  <img class="socialDrawer" src={FacebookIcon} />
+                  <img class="socialDrawerFb" src={FacebookIcon} />
                 </a>
               </div>
             </List>

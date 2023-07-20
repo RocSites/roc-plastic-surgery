@@ -452,6 +452,12 @@ const withStyles = makeStyles(() => ({
         width: "40px",
         margin: "0 10px"
     },
+    socialFacebookSpacing: {
+        height: "40px",
+        width: "40px",
+        margin: "0 10px",
+        marginBottom: "2px"
+    },
     socialLink: {
         display: "flex",
         justifyContent: "center",
@@ -551,7 +557,7 @@ const Main = () => {
                         <Typography className={classes.hourlyHeaderText}>OPEN DAILY</Typography>
                         <Typography className={classes.hourText}>Monday - Saturday: 11am-9pm </Typography>
                         <Typography className={classes.hourText}> Sunday: 12pm-9pm</Typography>
-                        <Typography className={classes.hourText}>Grill closes at 8pm everyday!</Typography>
+                        <Typography className={classes.hourText}>Grill closes at 8pm!</Typography>
                     </div>
                     <div className={classes.container}>
                         <SprinklesSvg />
@@ -609,7 +615,7 @@ const Main = () => {
                                     <img className={classes.socialFooter} src={InstagramIcon} />
                                 </a>
                                 <a href="https://www.facebook.com/ChillNGrillPal" target="_blank" className={classes.socialLink}>
-                                    <img className={classes.socialFooter} src={FacebookIcon} />
+                                    <img className={classes.socialFacebookSpacing} src={FacebookIcon} />
                                 </a>
                             </div>
 

@@ -182,6 +182,13 @@
     margin: 0 5px;
 }
 
+.socialDrawerFb {
+    height: 30px;
+    width: 30px;
+    margin: 0 5px;
+    margin-bottom: 1px; 
+}
+
 .socialNav {
     height: 30px;
     width: 30px;
