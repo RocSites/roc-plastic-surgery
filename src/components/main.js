@@ -484,7 +484,25 @@ const withStyles = makeStyles(() => ({
         aspectRatio: "1/1",
         height: "100vh",
         marginTop: "112px"
-    }
+    },
+    mainBanner: {
+        display: "flex",
+        marginTop: "25%",
+        marginLeft: "25%",
+        marginRight: "15%",
+        textAlign: "center",
+        position: "absolute",
+        backgroundColor: "white",
+        justifyContent: "center",
+        padding: "20px",
+        borderRadius: "35px",
+        "@media(max-width:600px)": {
+            marginTop: "50%",
+            marginLeft: "15%",
+            marginRight: "15%",
+        }
+    },
+    
 }))
 
 const Main = () => {
@@ -528,9 +546,10 @@ const Main = () => {
 
     return (
         <div className={classes.mainRoot}>
+            <div className={classes.mainBanner}>We are closed Tuesday, August 1st. We will reopen tomorrow, August 2nd</div>
+
             <img src={iceCreamOne} className={classes.landingImage} />
             <section class="py-5 section-bubble1">
-    
             </section>
 
             <span className={classes.scrollToServices} id="services"></span>
