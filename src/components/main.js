@@ -546,7 +546,7 @@ const Main = () => {
 
     return (
         <div className={classes.mainRoot}>
-            <div className={classes.mainBanner}>We are closed Tuesday, August 1st. We will reopen Wednesday, August 2nd</div>
+            {/* <div className={classes.mainBanner}>We are closed Tuesday, August 1st. We will reopen Wednesday, August 2nd</div> */}
 
             <img src={iceCreamOne} className={classes.landingImage} />
             <section class="py-5 section-bubble1">
