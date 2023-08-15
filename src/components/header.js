@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import Button from '@material-ui/core/Button'
 import chillGrillLogoOG from '../images/chill_logo_og.jpeg'
+import RocSitesLogo from "../images/logo/logo.png"
 import coneIcon from "../images/cone_icon.png"
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -21,15 +22,15 @@ import "./main.css"
 const withStyles = makeStyles(() => ({
   "@global": {
     "*": {
-      fontFamily: "Angkor !important",
+      // fontFamily: "Angkor !important",
       fontWeight: "100"
     }
   },
   navBarRoot: {
     position: "fixed",
     display: "flex",
-    background: "#ffffff",
-    color: "black",
+    background: "gray",
+    color: "white",
     justifyContent: "space-between",
     width: "100%",
     height: "112px",
@@ -73,12 +74,12 @@ const withStyles = makeStyles(() => ({
     "&:hover": {
       backgroundImage: "#f03d3dcf",
       border: "1px solid ##f03d3dcf",
-      color: "black"
+      color: "white"
     },
     "&:selected:hover": {
       backgroundImage: "#f03d3dcf",
       border: "1px solid ##f03d3dcf",
-      color: "black"
+      color: "white"
     }
   },
   list: {
@@ -99,7 +100,7 @@ const withStyles = makeStyles(() => ({
     display: "flex",
     backgroundColor: "#f03d3dcf",
     padding: "8px 16px",
-    color: "black",
+    color: "white",
     textTransform: "none",
     borderRadius: "35px",
     height: "50px",
@@ -109,7 +110,7 @@ const withStyles = makeStyles(() => ({
     display: "flex",
     backgroundColor: "#f03d3dcf",
     padding: "8px 16px",
-    color: "black",
+    color: "white",
     textTransform: "none",
     borderRadius: "35px",
     height: "50px",
@@ -124,7 +125,7 @@ const withStyles = makeStyles(() => ({
     flexDirection: "column",
   },
   navButtonMobile: {
-  color: "black",
+  color: "white",
   // fontWeight: "bold",
   textTransform: "none",
   margin: "10px 16px",
@@ -142,11 +143,6 @@ const Header = ({ siteTitle }) => {
     setOpenDrawer(drawerOpen => !drawerOpen)
   }
 
-  const handleClick = (id) => {
-    let scrollToId = id
-    setTimeout(() => scrollTo(scrollToId), 100)
-  }
-
   return (
     <header
       className={classes.navBarRoot}
@@ -154,50 +150,35 @@ const Header = ({ siteTitle }) => {
       <div className={classes.navLeftWrapper}>
         <div className={classes.navBarTitle}>
           <Link to="/" style={{ color: '#001841', textDecoration: `none` }}>
-            <img className={classes.navLogo} src={chillGrillLogoOG} alt="chill grill logo" />
-            {/* <img className={classes.navLogo} src={coneIcon} alt="chill grill logo" /> */}
+            <img className={classes.navLogo} src={RocSitesLogo} alt="company logo" />
           </Link>
         </div>
         <div className={classes.navBarButtonWrapper}>
-          {/* <Button
-            className={classes.navButton}
-            onClick={() => scrollTo('#hours')}
-
-          >
-            Hours
-          </Button> */}
           <AnchorLink className={classes.navButton}
-            to="/#hours" title="Hours">
+            to="/#sectionOne" title="Section 1">
           </AnchorLink>
           <AnchorLink className={classes.navButton}
-            to="/#menus" title="Menus">
+            to="/#sectionTwo" title="Section 2">
           </AnchorLink>
           <AnchorLink className={classes.navButton}
-            to="/#location" title="Location">
+            to="/#sectionThree" title="Section 3">
           </AnchorLink>
 
           <Button
             className={classes.navCallButton}
-            target="_blank" href="tel:(315) 597-8946"
+            target="_blank" href="tel:"
           >
             <PhoneIcon class="drawerPhoneIcon" />
             Call Us
           </Button>
-          {/* < Button
-            className={classes.navButton}
-            onClick={() => scrollTo('#about')}
-
-          >
-            About Us
-          </Button> */}
         </div>
       </div>
 
       <div class="socialLinkWrapperNav">
-        <a href="https://www.instagram.com/thatsasmall/?hl=en" target="_blank" class="socialLink">
+        <a href="" target="_blank" class="socialLink">
           <img class="socialNav" src={InstagramIcon} />
         </a>
-        <a href="https://www.facebook.com/ChillNGrillPal" target="_blank" class="socialLink">
+        <a href="" target="_blank" class="socialLink">
           <img class="socialNavFb" src={FacebookIcon} />
         </a>
       </div>
@@ -228,28 +209,28 @@ const Header = ({ siteTitle }) => {
             <List>
               <div className={classes.drawerLinkWrapper}>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#hours" title="Hours">
+                  to="/#sectionOne" title="Section 1">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#menus" title="Menus">
+                  to="/#sectionTwo" title="Section 2">
                 </AnchorLink>
                 <AnchorLink className={classes.navButtonMobile}
-                  to="/#location" title="Location">
+                  to="/#sectionThree" title="Section 3">
                 </AnchorLink>
               </div>
 
               <Button
                 class="drawerItemLogin"
-                target="_blank" href="tel:(315) 597-8946"
+                target="_blank" href="tel:"
               >
                 <PhoneIcon class="drawerPhoneIcon" />
                 Call Us
               </Button>
               <div class="socialLinkWrapperNavMobile">
-                <a href="https://www.instagram.com/thatsasmall/?hl=en" target="_blank" class="socialLink">
+                <a href="" target="_blank" class="socialLink">
                   <img class="socialDrawer" src={InstagramIcon} />
                 </a>
-                <a href="https://www.facebook.com/ChillNGrillPal" target="_blank" class="socialLink">
+                <a href="" target="_blank" class="socialLink">
                   <img class="socialDrawerFb" src={FacebookIcon} />
                 </a>
               </div>

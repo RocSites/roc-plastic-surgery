@@ -3,21 +3,13 @@ import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles'
 import { Link } from "gatsby"
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
-import ContactForm from './contactForm'
 import Button from '@material-ui/core/Button'
-import chillGrillSign from '../images/chill_grill_background.jpg'
-import iceCreamTwo from "../images/ice_cream_2.jpeg"
-import iceCreamOne from "../images/ice_cream_1.jpeg"
-import iceCreamSpoons from "../images/ice_cream_spoons.jpeg"
-import burgerImage from "../images/grill_image_1.jpeg"
+import rocBuildingOne from "../images/yassine-khalfalli-roc-image.jpg"
 import fiveStar from '../images/fiveStar.png'
 import Divider from '@material-ui/core/Divider'
 import PhoneIcon from '@material-ui/icons/Phone'
 import StarRateIcon from '@material-ui/icons/StarRate';
-import SprinklesSvg from '../components/sprinkles'
 import FacebookIcon from "../images/facebook_icon_60.png"
 import InstagramIcon from "../images/instagram_icon.png"
 import GoogleIcon from "../images/google_icon.png"
@@ -97,7 +89,7 @@ const withStyles = makeStyles(() => ({
         fontSize: "2rem",
         color: "black",
         padding: "10px",
-        width: "50%",
+        width: "100%",
         margin: "auto",
         "@media(max-width: 600px)": {
             width: "90%"
@@ -132,7 +124,7 @@ const withStyles = makeStyles(() => ({
         marginRight: "0px",
         fontSize: "2em",
         fontWeight: "500",
-        fontFamily: "Angkor, sans-serif !important",
+        // fontFamily: "Angkor, sans-serif !important",
         textAlign: "center",
         margin: "auto",
         "@media(max-width: 600px)": {
@@ -164,7 +156,7 @@ const withStyles = makeStyles(() => ({
     serviceWrapper: {
         paddingTop: "2.5em"
     },
-    scrollToAbout: {
+    scrollToSectionOne: {
         height: "80px",
         background: "#ffffff"
     },
@@ -483,7 +475,8 @@ const withStyles = makeStyles(() => ({
         objectFit: "cover",
         aspectRatio: "1/1",
         height: "100vh",
-        marginTop: "112px"
+        marginTop: "112px",
+        marginBottom: "0px"
     },
     mainBanner: {
         display: "flex",
@@ -502,21 +495,21 @@ const withStyles = makeStyles(() => ({
             marginRight: "15%",
         }
     },
-    
+
 }))
 
 const Main = () => {
     const classes = withStyles();
     const { mobileImage, desktopImage } = useStaticQuery(graphql`
     query { 
-      desktopImage: file(relativePath: { eq: "ice_cream_1.jpeg" }) {
+      desktopImage: file(relativePath: { eq: "yassine-khalfalli-roc-image.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      mobileImage: file(relativePath: { eq: "ice_cream_1.jpeg" }) {
+      mobileImage: file(relativePath: { eq: "yassine-khalfalli-roc-image.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 650, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -548,82 +541,62 @@ const Main = () => {
         <div className={classes.mainRoot}>
             {/* <div className={classes.mainBanner}>We are closed Tuesday, August 1st. We will reopen Wednesday, August 2nd</div> */}
 
-            <img src={iceCreamOne} className={classes.landingImage} />
-            <section class="py-5 section-bubble1">
-            </section>
+            <img src={rocBuildingOne} className={classes.landingImage} />
 
-            <span className={classes.scrollToServices} id="services"></span>
-            <section class="py-5 section-bubble2">
-
+            <section class="sectionWrapper">
                 <div className={classes.container}>
-                    <Typography className={classes.someOfWorkHeader}>Family owned and operated, <br /> Chill & Grill serves old-fashioned ice cream & great food.</Typography>
-                    <Divider className={classes.serviceDivider} />
                     <div className={classes.container}>
-                        <SprinklesSvg />
-                        <span className={classes.scrollToAbout} id="hours"></span>
+                        <span className={classes.scrollToSectionOne} id="sectionOne"></span>
                     </div>
                     <div className={classes.containerMarginBottomSmall}>
-                        <Typography className={classes.hourlyHeaderText}>OPEN DAILY</Typography>
-                        <Typography className={classes.hourText}>Monday - Saturday: 11am-9pm </Typography>
-                        <Typography className={classes.hourText}> Sunday: 12pm-9pm</Typography>
-                        <Typography className={classes.hourText}>Grill closes at 8pm</Typography>
-                    </div>
-                    <div className={classes.container}>
-                        <SprinklesSvg />
-                        <span className={classes.scrollToAbout} id="menus"></span>
-                    </div>
-
-                    <div class="menuBlockWrapper">
-                        <Link to="/chill-menu" class="menuContent menuLink chillBlock">
-                            Chill Menu
-                        </Link>
-                        <div class="menuContent">
-                            <img src={iceCreamSpoons} />
-                        </div>
-                    </div>
-                    <div class="menuBlockWrapper">
-                        <div class="menuContent">
-                            <img src={burgerImage} />
-                        </div>
-                        <Link to="/grill-menu" class="menuContent menuLink grillBlock">
-                            Grill Menu
-                        </Link>
+                        <Typography className={classes.someOfWorkHeader}>Section 1 Header Line 1... <br /> Section 1 Line 2.</Typography>
                     </div>
                 </div>
 
             </section>
-            <span className={classes.scrollToLocation} id="location"></span>
+            <div className={classes.container}>
+                <span className={classes.scrollToSectionOne} id="sectionTwo"></span>
+            </div>
+            <section class="sectionWrapper">
+                <Typography className={classes.someOfWorkHeader}>Section 2 Header Line 1... <br /> Section 2 Line 2.</Typography>
+
+                <Link to="/chill-menu" class="menuContent menuLink chillBlock">
+                    Page 2
+                </Link>
+                <Link to="/grill-menu" class="menuContent menuLink grillBlock">
+                    Page 3
+                </Link>
+            </section>
+            <span className={classes.scrollToLocation} id="sectionThree"></span>
 
             <section class="py-5 section-bubble3">
                 <div className={classes.container}>
                     <div className={classes.aboutWrapper}>
                         <div className={classes.aboutSectionWrapper}>
-                            <Typography className={classes.aboutTitleHeader}>Location</Typography>
-                            <Typography className={classes.addressText}>616 E. Main Street, Palmyra, NY 14522</Typography>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11285.550307357447!2d-77.22038615666283!3d43.06138775705887!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d12ac7aa77f46f%3A0xef195eaca8ebfd95!2sChill%20%26%20Grill!5e0!3m2!1sen!2sus!4v1689823831901!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <Typography className={classes.aboutTitleHeader}>Section 3</Typography>
+                            <Typography className={classes.addressText}>Section 3 subtext</Typography>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* </BackgroundImage> */}
             <span className={classes.scrollToContact} id="contactForm"></span>
             <section class="py-5 section-bubble4">
                 <div className={classes.container}>
                     <div>
                         <Typography className={classes.connectHeader}>Connect With Us</Typography>
                         <div className={classes.phoneEmailWrapper}>
-                            <a href="tel:(315) 597-8946" className={classes.contactPhone}>
+                            <a href="tel:" className={classes.contactPhone}>
                                 <Button className={classes.contactButton}>
                                     <PhoneIcon className={classes.phoneIcon} />
-                                    (315) 597-8946
+                                    (123) 456-7890
                                 </Button>
                             </a>
                             <div className={classes.socialLinkWrapper}>
-                                <a href="https://www.instagram.com/thatsasmall/?hl=en" target="_blank" className={classes.socialLink}>
+                                <a href="" target="_blank" className={classes.socialLink}>
                                     <img className={classes.socialFooter} src={InstagramIcon} />
                                 </a>
-                                <a href="https://www.facebook.com/ChillNGrillPal" target="_blank" className={classes.socialLink}>
+                                <a href="" target="_blank" className={classes.socialLink}>
                                     <img className={classes.socialFacebookSpacing} src={FacebookIcon} />
                                 </a>
                             </div>
@@ -631,7 +604,7 @@ const Main = () => {
                         </div>
                         <div className={classes.reviewsWrapper}>
                             <a className={classes.reviewLink}
-                                href="https://www.google.com/search?q=chill+grill+palmyra&sxsrf=AB5stBhx8d0odqQLN5k6zp0SbZv3yaggCQ%3A1689826878596&ei=Pra4ZMn5I9Gk5NoPvum8mA0&oq=chill+gril&gs_lp=Egxnd3Mtd2l6LXNlcnAiCmNoaWxsIGdyaWwqAggAMgQQIxgnMgQQIxgnMgQQIxgnMgUQABiABDIWEC4YgAQYFBiHAhixAxiDARjHARivATIFEAAYgAQyCBAuGNQCGIAEMgUQABiABDIQEC4YFBivARjHARiHAhiABDILEC4YgAQYxwEYrwFI9xxQkApYwBJwA3gBkAEAmAGmAaABmAqqAQQwLjEwuAEByAEA-AEBwgIKEAAYRxjWBBiwA8ICBxAjGIoFGCfCAggQABiKBRiRAsICCxAAGIoFGLEDGIMBwgIREC4YgAQYsQMYgwEYxwEY0QPCAgsQABiABBixAxiDAcICCBAAGIAEGLEDwgIHEC4YigUYQ8ICERAuGIMBGMcBGLEDGNEDGIAEwgIOEC4YgAQYsQMYxwEY0QPCAhAQLhiABBgUGIcCGMcBGK8BwgIOEAAYgAQYsQMYgwEYyQPCAggQABiKBRiSA8ICBxAAGIoFGEPCAgoQABiABBgUGIcCwgIQEC4YgAQYsQMYxwEY0QMYCsICExAuGBQYrwEYxwEYhwIYsQMYgATCAgsQLhiABBixAxiDAcICDRAAGIAEGLEDGIMBGAriAwQYACBBiAYBkAYI&sclient=gws-wiz-serp#lrd=0x89d12ac7aa77f46f:0xef195eaca8ebfd95,1,,,,"
+                                href=""
                                 target="_blank"
                             >
                                 <Button

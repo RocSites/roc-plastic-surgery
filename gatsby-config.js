@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Chill & Grill`,
-    description: `A family owned and operated ice cream shop and grill.`,
+    title: `Rocsites Gastby template 3`,
+    description: `Generic Gatsby template for businesses`,
     author: `Doug Kellermeyer`,
   },
   plugins: [
@@ -27,7 +27,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/cone_icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo/logo.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
