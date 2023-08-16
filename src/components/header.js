@@ -185,7 +185,7 @@ const Header = ({ siteTitle }) => {
       <div className={classes.navBarHamburgerDrawerWrapper}>
         <Button
           className={classes.navCallButtonMobile}
-          target="_blank" href="tel:(315) 597-8946"
+          target="_blank" href="tel:"
         >
           <PhoneIcon class="drawerPhoneIcon" />
           Call Us
