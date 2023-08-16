@@ -13,8 +13,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import PhoneIcon from '@mui/icons-material/Phone';
-import FacebookIcon from "../images/facebook_icon_60.png"
-import InstagramIcon from "../images/instagram_icon3.svg"
+import FacebookIcon from "../images/facebook_icon4.svg"
+import InstagramIcon from "../images/instagram_icon4.svg"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 import "./main.css"
