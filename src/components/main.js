@@ -11,7 +11,7 @@ import Divider from '@material-ui/core/Divider'
 import PhoneIcon from '@material-ui/icons/Phone'
 import StarRateIcon from '@material-ui/icons/StarRate';
 import FacebookIcon from "../images/facebook_icon_60.png"
-import InstagramIcon from "../images/instagram_icon.png"
+import InstagramIcon from "../images/instagram_icon3.svg"
 import GoogleIcon from "../images/google_icon.png"
 import "./main.css"
 
