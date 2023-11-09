@@ -29,13 +29,11 @@ const withStyles = makeStyles(() => ({
   navBarRoot: {
     position: "fixed",
     display: "flex",
-    background: "gray",
+    background: "transparent",
     color: "white",
     justifyContent: "space-between",
     width: "100%",
-    height: "112px",
     top: 0,
-    boxShadow: "1px 0 10px 0 rgb(89 98 115 / 20%)",
     zIndex: "1",
     opacity: "0.85"
   },
@@ -50,24 +48,14 @@ const withStyles = makeStyles(() => ({
     margin: "auto 10px",
     textDecoration: "none"
   },
-  navBarButtonWrapper: {
-    display: "flex",
-    color: "white",
-    margin: "10px",
-    "@media(max-width: 600px)": {
-      display: "none"
-    }
-  },
   navBarHamburgerDrawerWrapper: {
-    display: "none",
-    "@media(max-width: 601px)": {
-      display: "flex",
-      margin: "auto 10px"
-    }
+    display: "flex",
+    margin: "auto 10px"
+
   },
   navLogo: {
     display: "flex",
-    width: "60px",
+    width: "300px",
     margin: "auto",
   },
   drawerItem: {
@@ -88,10 +76,7 @@ const withStyles = makeStyles(() => ({
   hamburgerIcon: {
     margin: "20px",
     fontSize: "2.5rem",
-    color: "red",
-    "@media(min-width: 601px)": {
-      display: "none"
-    }
+    color: "#927112"
   },
   navLeftWrapper: {
     display: "flex",
@@ -106,31 +91,17 @@ const withStyles = makeStyles(() => ({
     height: "50px",
     margin: "auto 20px"
   },
-  navCallButtonMobile: {
-    display: "flex",
-    backgroundColor: "#f03d3dcf",
-    padding: "8px 16px",
-    color: "white",
-    textTransform: "none",
-    borderRadius: "35px",
-    height: "50px",
-    margin: "auto 20px",
-    "@media(max-width: 600px)": {
-      fontSize: "0.75rem",
-      margin: "auto"
-    }
-  },
   drawerLinkWrapper: {
     display: "flex",
     flexDirection: "column",
   },
   navButtonMobile: {
-  color: "white",
-  // fontWeight: "bold",
-  textTransform: "none",
-  margin: "10px 16px",
-  textDecoration: "none"
-}
+    color: "#927112",
+    // fontWeight: "bold",
+    textTransform: "none",
+    margin: "10px 16px",
+    textDecoration: "none"
+  }
 }))
 
 
@@ -153,43 +124,8 @@ const Header = ({ siteTitle }) => {
             <img className={classes.navLogo} src={RocSitesLogo} alt="company logo" />
           </Link>
         </div>
-        <div className={classes.navBarButtonWrapper}>
-          <AnchorLink className={classes.navButton}
-            to="/#sectionOne" title="Section 1">
-          </AnchorLink>
-          <AnchorLink className={classes.navButton}
-            to="/#sectionTwo" title="Section 2">
-          </AnchorLink>
-          <AnchorLink className={classes.navButton}
-            to="/#sectionThree" title="Section 3">
-          </AnchorLink>
-
-          <Button
-            className={classes.navCallButton}
-            target="_blank" href="tel:"
-          >
-            <PhoneIcon class="drawerPhoneIcon" />
-            Call Us
-          </Button>
-        </div>
-      </div>
-
-      <div class="socialLinkWrapperNav">
-        <a href="" target="_blank" class="socialLink">
-          <img class="socialNav" src={InstagramIcon} />
-        </a>
-        <a href="" target="_blank" class="socialLink">
-          <img class="socialNavFb" src={FacebookIcon} />
-        </a>
       </div>
       <div className={classes.navBarHamburgerDrawerWrapper}>
-        <Button
-          className={classes.navCallButtonMobile}
-          target="_blank" href="tel:"
-        >
-          <PhoneIcon class="drawerPhoneIcon" />
-          Call Us
-        </Button>
         <MenuIcon
           className={classes.hamburgerIcon}
           onClick={toggleDrawer}

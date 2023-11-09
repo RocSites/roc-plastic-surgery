@@ -5,8 +5,8 @@ import { makeStyles, ThemeProvider } from '@material-ui/core/styles'
 import { Link } from "gatsby"
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import rocBuildingOne from "../images/yassine-khalfalli-roc-image.jpg"
 import fiveStar from '../images/fiveStar.png'
+import faceBackground from "../images/landing_background.jpg"
 import Divider from '@material-ui/core/Divider'
 import PhoneIcon from '@material-ui/icons/Phone'
 import StarRateIcon from '@material-ui/icons/StarRate';
@@ -300,59 +300,6 @@ const withStyles = makeStyles(() => ({
     emailIcon: {
         marginRight: "10px"
     },
-    bbbWrapper: {
-        display: "flex",
-        margin: "auto",
-        marginTop: "0px",
-        backgroundColor: "white",
-        borderRadius: "14px",
-        "@media(max-width:600px)": {
-            flexDirection: "column",
-            justifyContent: "center",
-            height: "110px",
-            marginBottom: "20px",
-        }
-    },
-    bbbLink: {
-        display: "flex",
-        textDecoration: "none",
-        padding: "10px",
-    },
-    bbbImage: {
-        margin: "auto",
-        padding: "10px",
-        minWidth: "200px",
-        maxWidth: "300px",
-        maxHeight: "150px",
-        borderRadius: "15px"
-    },
-    bbbYearsCircle: {
-        width: "65px",
-        height: "65px",
-        backgroundColor: "#1f5a76",
-        margin: "auto",
-        marginRight: "10px",
-        fontFamily: "proxima-nova, Helvetica, Arial, sans-serif",
-        borderRadius: "14px"
-    },
-    bbbCirleText: {
-        color: "white",
-        opacity: "1 !important",
-        fontWeight: "bold",
-        textAlign: "center",
-        fontSize: "2.0rem"
-    },
-    phBizCardWrapper: {
-        display: "flex",
-        justifyContent: "center"
-    },
-    phBizCardImage: {
-        maxWidth: "300px",
-        maxHeight: "200px"
-    },
-    fiveStar: {
-        color: "#f5b81c"
-    },
     hourText: {
         display: "flex",
         color: "black",
@@ -470,29 +417,46 @@ const withStyles = makeStyles(() => ({
         margin: "20px 0",
         marginBottom: "80px"
     },
-    landingImage: {
-        width: "100%",
-        objectFit: "cover",
-        aspectRatio: "1/1",
-        height: "100vh",
-        marginTop: "112px",
-        marginBottom: "0px"
-    },
     mainBanner: {
         display: "flex",
-        marginTop: "25%",
-        marginLeft: "25%",
-        marginRight: "15%",
-        textAlign: "center",
-        position: "absolute",
-        backgroundColor: "white",
-        justifyContent: "center",
+        flexDirection: "column",
+        backgroundImage: `url(${faceBackground})`,
+        background: "no-repeat",
+        backgroundSize: "contain",
+        backgroundPosition: "right",
+        paddingTop: "33%",
+        paddingRight: "30px",
+        justifyContent: "flex-start",
+        height: "100vh",
         padding: "20px",
-        borderRadius: "35px",
+        "@media(max-width:1200px)": {
+            paddingTop: "30%",
+        },
+        "@media(max-width:800px)": {
+            paddingTop: "50%",
+            justifyContent: "center",
+        },
         "@media(max-width:600px)": {
-            marginTop: "50%",
-            marginLeft: "15%",
-            marginRight: "15%",
+            paddingTop: "70%",
+            backgroundPositionX: "66%",
+            backgroundSize: "cover",
+            backgroundPositionY: "70px"
+        }
+    },
+    mainBannerText: {
+        color: "black",
+        // fontSize: "3rem",
+        fontSize: "2.5rem",
+        textAlign: "left",
+        textTransform: "uppercase",
+        fontWeight: 200,
+        lineHeight: "1.25",
+        paddingLeft: "30px",
+        fontFamily: "Roboto, sans-serif !important",
+        zIndex: 1,
+        "@media(max-width:700px)": {
+            fontSize: "2.5rem",
+            textAlign: "center"
         }
     },
 
@@ -500,48 +464,18 @@ const withStyles = makeStyles(() => ({
 
 const Main = () => {
     const classes = withStyles();
-    const { mobileImage, desktopImage } = useStaticQuery(graphql`
-    query { 
-      desktopImage: file(relativePath: { eq: "yassine-khalfalli-roc-image.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      mobileImage: file(relativePath: { eq: "yassine-khalfalli-roc-image.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 650, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      
-    }
-  `)
-
-    const sources = [
-        mobileImage.childImageSharp.fluid,
-        {
-            ...desktopImage.childImageSharp.fluid,
-            media: `(min-width: 650px)`
-        }
-    ]
-
-    const FiveStar = () => {
-        return (
-            <div className={classes.fiveStar}>
-                <StarRateIcon /><StarRateIcon /><StarRateIcon /><StarRateIcon /><StarRateIcon />
-            </div>
-        )
-    }
-
 
     return (
         <div className={classes.mainRoot}>
-            {/* <div className={classes.mainBanner}>We are closed Tuesday, August 1st. We will reopen Wednesday, August 2nd</div> */}
+            <div className={classes.mainBanner}>
+                <Typography className={classes.mainBannerText}>
+                    The Art & <br /> Science of <br/> Transformation
+                </Typography>
+                <button className="consultationButton">
+                    Request a Consultation
+                </button>
+            </div>
 
-            <img src={rocBuildingOne} className={classes.landingImage} />
 
             <section class="sectionWrapper">
                 <div className={classes.container}>
@@ -613,7 +547,6 @@ const Main = () => {
                                     <div className={classes.reviewStarWrapper}>
                                         <Typography className={classes.reviewHeader}>Leave us a review!</Typography>
                                         <img className={classes.socialFooterMargin} src={GoogleIcon} />
-                                        <FiveStar />
                                     </div>
                                 </Button>
                             </a>
@@ -621,7 +554,6 @@ const Main = () => {
                     </div>
                 </div>
             </section>
-
         </div>
     )
 }
