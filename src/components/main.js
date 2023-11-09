@@ -13,6 +13,8 @@ import StarRateIcon from '@material-ui/icons/StarRate';
 import FacebookIcon from "../images/facebook_icon4.svg"
 import InstagramIcon from "../images/instagram_icon4.svg"
 import GoogleIcon from "../images/google_icon.png"
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import "./main.css"
 
 const withStyles = makeStyles(() => ({
@@ -424,9 +426,7 @@ const withStyles = makeStyles(() => ({
         background: "no-repeat",
         backgroundSize: "contain",
         backgroundPosition: "right",
-        paddingTop: "33%",
-        paddingRight: "30px",
-        justifyContent: "flex-start",
+        justifyContent: "flex-end",
         height: "100vh",
         padding: "20px",
         "@media(max-width:1200px)": {
@@ -468,12 +468,23 @@ const Main = () => {
     return (
         <div className={classes.mainRoot}>
             <div className={classes.mainBanner}>
-                <Typography className={classes.mainBannerText}>
-                    The Art & <br /> Science of <br/> Transformation
-                </Typography>
-                <button className="consultationButton">
-                    Request a Consultation
-                </button>
+                <div className="mainBannerTextWrapper">
+                    <Typography className={classes.mainBannerText}>
+                        The Art & <br /> Science of <br /> Transformation
+                    </Typography>
+                    <button className="consultationButton">
+                        Request a Consultation
+                    </button>
+                </div>
+
+                <div className="arrowWrapper">
+                    <Link>
+                        <ArrowBackIosIcon style={{ fontSize: "4rem", color: "#8f7311" }} />
+                    </Link>
+                    <Link to="/hand-center">
+                        <ArrowForwardIosIcon style={{ fontSize: "4rem", color: "#8f7311" }} />
+                    </Link>
+                </div>
             </div>
 
 

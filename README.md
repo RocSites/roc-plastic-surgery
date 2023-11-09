@@ -13,7 +13,10 @@ yarn start
 Your site is now running at `http://localhost:8000`!
 
 
-    
+## theme notes
+
+light gold color: `#b08e46`
+dark gold color: `#8f7311`
 
 
 
